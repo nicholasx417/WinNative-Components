@@ -67,9 +67,9 @@ For Driver manager URL. Paste main repo URL.
 [**Download Assets**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Proton)
 
 ### Drivers
-**Qualcomm** - [**System Drivers**](https://github.com/nicholasx417/WinNative-Components/releases?q=Turnip+NOT+WinNative&expanded=true) 
+**Qualcomm** - [**System Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/System)
 
-**Turnip - Stables** - Coming soon
+**Turnip** - [**Stable Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Turnip)
 
 **WinNative - Turnip** - 
 
