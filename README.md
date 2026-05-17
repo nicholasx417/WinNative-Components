@@ -2,8 +2,8 @@
 
 <img src="logo.jpg" alt="Xnick Logo" width="300"/>
 
-# Xnick's Nightly Builds
-**Automated WCP Packages for Android Emulation (Winlator, Mobox, etc.)**
+# WinNative Nightly Builds
+**Automated WCP Packages for Android Emulation (WinNative, Winlator, ect)**
 
 These builds are automatically checked and generated every night at **9:00 PM CST** if new updates exist in their official repositories.
 
@@ -13,7 +13,7 @@ Contents.Json updated at **12:00 AM CST**
 
 ---
 
-### Contents for Winlator
+### Contents for Winlator by Xnick417x
 Copy the link below, open Winlator, and go to **Settings** -> **Downloadable Content URL** -> **Paste URL**.
 
     https://raw.githubusercontent.com/Xnick417x/winlator-nightly-wcp/refs/heads/main/contents.json
@@ -37,7 +37,6 @@ For Driver manager URL. Paste main repo URL.
 
 | Component | Download | History |
 | :--- | :--- | :--- |
-| **Weekly Bundle** (All-in-One) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/Weekly-2026-05-15/Weekly-2026-05-15.7z) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=Weekly&expanded=true) |
 | **DXVK** (GPLAsync) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/dxvk-nightly-60978eb9/2.7.1-gplasync-60978eb9.wcp) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=dxvk-nightly+NOT+arm64ec+NOT+Weekly&expanded=true) |
 | **DXVK** (ARM64EC) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/dxvk-arm64ec-nightly-60978eb9/2.7.1-arm64ec-60978eb9.wcp) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=dxvk-arm64ec-nightly+NOT+Weekly&expanded=true) |
 | **VKD3D-Proton** (Standard) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/vkd3d-nightly-d2757180/Vkd3d-3.0.1-d2757180.wcp) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=vkd3d-nightly+NOT+arm64ec+NOT+Weekly&expanded=true) |
@@ -60,12 +59,6 @@ For Driver manager URL. Paste main repo URL.
 | **WOWBox64** | [**Browse Stable Versions**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/tag/Stable-wowbox64) |
 | **DXVK Sarek** | [**Browse Stable Versions**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/tag/Sarek) |
 
-### Turnip Nightly
-
-| Component | Download | History |
-| :--- | :--- | :--- |
-| **Turnip** (a6xx/a7xx) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/nightly-Turnip-26.2.0-b41cd59/Turnip-26.2.0-b41cd59.zip) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=nightly-Turnip&expanded=true) |
-| **Turnip** (a8xx-experimental) | [**Download Latest**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/download/nightly-Turnip-26.2.0-b41cd59/Turnip-26.2.0-b41cd59-A8xx.zip) | [View History](https://github.com/Xnick417x/winlator-nightly-wcp/releases?q=nightly-Turnip&expanded=true) |
 
 ### Wine Layers (Bionic)
 [**Download Assets**](https://github.com/Xnick417x/winlator-nightly-wcp/releases/tag/Wine)
@@ -75,17 +68,15 @@ For Driver manager URL. Paste main repo URL.
 
 ### Drivers
 **Qualcomm** - Coming soon  
-**Turnip - Stables** - Coming soon  
-
-### Runtime Packages
-[**Download Runtime Package**](https://huggingface.co/datasets/Xnick417x/Runtime-packages/resolve/main/Runtime-packages.7z?download=true)
+**Turnip - Stables** - Coming soon
+**WinNative - Turnip** - 
 
 ---
 
 ### Installation
-1. Download the `.wcp` file (or unzip the Weekly Bundle).
-2. Open **Winlator** (or your container manager).
-3. Go to **Settings** -> **Install Content**.
+1. Download the `.wcp` file.
+2. Open **WinNative** (or your container manager).
+3. Go to **Settings** -> **Install Components**.
 4. Select the downloaded file to install.
 
 ---
@@ -115,7 +106,8 @@ Third-party components used for packaging (such as DXVK, Wine, vkd3d-proton, FEX
 * The412Banner - Nightly Turnip [**The412Banner**](https://github.com/The412Banner/Banners-Turnip)
 * AndreVto - Proton 11 Wip [**AndreVto**](https://github.com/AndreVto/proton-wine)
 * teldommm - Proton 10 NTSync [**teldommm**](https://github.com/teldommm/proton-arm64-nightlies)
-* WinNative - Proton 11 NTSync [**WinNative**](https://github.com/MaxsTechReview/WinNative) 
+* WinNative - Proton 11 NTSync [**WinNative**](https://github.com/MaxsTechReview/WinNative)
+* Xnick417x - repo for WinNative [**Xnick417x**](https://github.com/Xnick417x/winlator-nightly-wcp)
 
 ---
 
@@ -129,5 +121,5 @@ The custom build scripts and automated GitHub Actions workflows in this reposito
 ---
 
 <div align="center">
-Maintained by Xnick417x
+Maintained by Xnick417 for WinNative.
 </div>
