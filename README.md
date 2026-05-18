@@ -5,7 +5,7 @@
 # WinNative Nightly Builds
 **Automated WCP Packages for Android Emulation (WinNative, Winlator, ect)**
 
-These builds are automatically checked and generated every night at **9:00 PM CST** if new updates exist in their official repositories.
+These builds are automatically checked and generated every night at **11:00 PM CST** if new updates exist in their official repositories.
 
 Contents.Json updated at **12:00 AM CST**
 
