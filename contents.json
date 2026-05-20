@@ -319,15 +319,15 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-11.0-1-x86_64",
+    "verName": "Proton-11.0-5-x86_64",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-x86_64.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-5-x86_64.wcp"
   },
   {
     "type": "Proton",
-    "verName": "Proton-11.0-1-arm64ec",
+    "verName": "Proton-11.0-5-arm64ec",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-arm64ec.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-5-arm64ec.wcp"
   },
   {
     "type": "Proton",
