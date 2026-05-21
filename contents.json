@@ -133,9 +133,15 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-2.4.1.-special-d8",
+    "verName": "Dxvk-2.4.1-special+d8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-2.4.1.-special-d8.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-2.4.1-special+d8.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-2.4.1-a6xx-fix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-2.4.1-a6xx-fix.wcp"
   },
   {
     "type": "DXVK",
