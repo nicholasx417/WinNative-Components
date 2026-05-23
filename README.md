@@ -78,8 +78,6 @@ For Driver manager URL. Paste main repo URL.
 
 **Whitebelyash** - [**White gen8**](https://github.com/nicholasx417/WinNative-Components/releases/tag/White)
 
-**MaxsTechReview** - [**MTR Turnip**](https://github.com/nicholasx417/WinNative-Components/releases/tag/MTR)
-
 ---
 
 ### Installation
