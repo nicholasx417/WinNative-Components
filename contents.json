@@ -511,6 +511,18 @@
   },
   {
     "type": "Wine",
+    "verName": "wine-11.9-x86_64",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Wine/wine-11.9-x86_64.wcp"
+  },
+  {
+    "type": "Wine",
+    "verName": "wine-11.9-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Wine/wine-11.9-arm64ec.wcp"
+  },
+  {
+    "type": "Wine",
     "verName": "wine-10.0-x86_64-ref4ik",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Wine/wine-10.0-x86_64-ref4ik.wcp"
