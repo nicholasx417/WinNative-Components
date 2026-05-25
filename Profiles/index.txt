@@ -1,7 +1,8 @@
 Mapped External Keyboard.icp
 18WheelsOfSteel.icp
 Adventure 2.icp
-Ajay common V1.2
+Ajay common V1.2.icp
+Ajay Xbox Controller.icp
 Alan Wake.icp
 Alien Versus Predator.icp
 All Games RTS.icp
