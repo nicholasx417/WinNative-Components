@@ -307,6 +307,18 @@
   },
   {
     "type": "Proton",
+    "verName": "WN.Proton-11-arm64ec-b5-steam",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-b5-arm64ec-steam.wcp"
+  },
+  {
+    "type": "Proton",
+    "verName": "WN.Proton-11-x86_64-b5-steam",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-b5-x86_64-steam.wcp"
+  },
+  {
+    "type": "Proton",
     "verName": "Proton-arm64ec-10.99-NTSync-v5",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-arm64ec-10.99-NTSync-v5.wcp"
@@ -316,12 +328,6 @@
     "verName": "Proton-BE-arm64ec-b01ca65",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-BE-arm64ec-b01ca65.wcp"
-  },
-  {
-    "type": "Proton",
-    "verName": "WN.Proton-11-arm64ec-b5-steam",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-arm64ec-b5-steam.wcp"
   },
   {
     "type": "Proton",
