@@ -325,9 +325,9 @@
   },
   {
     "type": "Proton",
-    "verName": "WN.Proton-11-b5-x86_64-steam",
+    "verName": "WN.Proton-11-b5-x86_64-ntdll.steam",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-b5-x86_64-steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-b5-x86_64-ntdll.steam.wcp"
   },
   {
     "type": "Proton",
