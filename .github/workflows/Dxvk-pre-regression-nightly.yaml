@@ -1,7 +1,7 @@
 name: Build DXVK Pre-Regress Combined
 
 on:
-push:
+  push:
     branches:
       - '**'
   schedule:
