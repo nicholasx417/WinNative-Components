@@ -454,9 +454,12 @@ jobs:
             ]
           }
           EOF
-          
+
+      - name: Create Package
+        if: env.SHOULD_BUILD == 'true'
+        run: |
           cd packaging
-          tar --zstd -cf ../Dxvk-${{ env.VERSION_NAME }}.wcp *
+          tar -cJf ../Dxvk-${{ env.VERSION_NAME }}.wcp *
 
       - name: Create Release (ARM64EC)
         if: env.SHOULD_BUILD == 'true'
