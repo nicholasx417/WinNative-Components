@@ -158,7 +158,7 @@ jobs:
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd packaging
-          tar -cJf ../${{ env.VERSION_NAME }}.wcp *
+          tar -cJf ../Dxvk-${{ env.VERSION_NAME }}.wcp *
 
       - name: Create Release
         if: env.SHOULD_BUILD == 'true'
@@ -260,8 +260,8 @@ jobs:
           git fetch --tags
           LATEST_TAG=$(git describe --tags --abbrev=0 | sed 's/^v//')
           echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
-          echo "VERSION_NAME=${LATEST_TAG}-pre-regress-arm64ec-${COMMIT_HASH}" >> $GITHUB_ENV
-          echo "JSON_VERSION_NAME=${LATEST_TAG}-pre-regress-gplasync-arm64ec-${COMMIT_HASH}" >> $GITHUB_ENV
+          echo "VERSION_NAME=${LATEST_TAG}-arm64ec-pre-regress-${COMMIT_HASH}" >> $GITHUB_ENV
+          echo "JSON_VERSION_NAME=${LATEST_TAG}-arm64ec-pre-regress-gplasync-${COMMIT_HASH}" >> $GITHUB_ENV
 
       - name: Install Dependencies
         if: env.SHOULD_BUILD == 'true'
@@ -454,9 +454,12 @@ jobs:
             ]
           }
           EOF
-          
+
+      - name: Create Package
+        if: env.SHOULD_BUILD == 'true'
+        run: |
           cd packaging
-          tar --zstd -cf ../${{ env.VERSION_NAME }}.wcp *
+          tar -cJf ../Dxvk-${{ env.VERSION_NAME }}.wcp *
 
       - name: Create Release (ARM64EC)
         if: env.SHOULD_BUILD == 'true'
