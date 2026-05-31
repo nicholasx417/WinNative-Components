@@ -110,13 +110,13 @@ jobs:
           cp dxvk-built/dxvk-master/x64/*.dll packaging/system32/
           cp dxvk-built/dxvk-master/x32/*.dll packaging/syswow64/
           
-          cat <<EOF > packaging/contents.json
+          cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
             "versionName": "${{ env.JSON_VERSION_NAME }}",
             "versionCode": 0,
             "description": "DXVK ${{ env.LATEST_TAG }} Pre-Regress (GPLAsync + Timeline Semphora)",
-            "author": "Blank",
+            "author": "Xnick417x",
             "files": [
               {
                 "source": "system32/d3d9.dll",
@@ -403,13 +403,13 @@ jobs:
           llvm-strip --strip-all packaging/system32/*.dll
           llvm-strip --strip-all packaging/syswow64/*.dll
 
-          cat <<EOF > packaging/contents.json
+          cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
             "versionName": "${{ env.JSON_VERSION_NAME }}",
             "versionCode": 0,
-            "description": "DXVK ${{ env.LATEST_TAG }} ARM64EC Pre-Regress (GPLAsync + Timeline Semphora)",
-            "author": "Blank",
+            "description": "DXVK ${{ env.LATEST_TAG }} Arm64ec Pre-Regress (GPLAsync + Timeline Semphora)",
+            "author": "Xnick417x",
             "files": [
               {
                 "source": "system32/d3d10core.dll",
