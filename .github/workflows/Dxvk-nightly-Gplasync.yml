@@ -109,16 +109,40 @@ jobs:
             "versionName": "${{ env.VERSION_NAME }}",
             "versionCode": 0,
             "description": "DXVK ${{ env.LATEST_TAG }} GPLAsync",
-            "author": "Blank",
+            "author": "Xnick417x",
             "files": [
-              {"source": "system32/d3d9.dll", "target": "\${system32}/d3d9.dll"},
-              {"source": "system32/d3d10core.dll", "target": "\${system32}/d3d10core.dll"},
-              {"source": "system32/d3d11.dll", "target": "\${system32}/d3d11.dll"},
-              {"source": "system32/dxgi.dll", "target": "\${system32}/dxgi.dll"},
-              {"source": "syswow64/d3d9.dll", "target": "\${syswow64}/d3d9.dll"},
-              {"source": "syswow64/d3d10core.dll", "target": "\${syswow64}/d3d10core.dll"},
-              {"source": "syswow64/d3d11.dll", "target": "\${syswow64}/d3d11.dll"},
-              {"source": "syswow64/dxgi.dll", "target": "\${syswow64}/dxgi.dll"}
+              {
+                "source": "system32/d3d9.dll",
+                "target": "\${system32}/d3d9.dll"
+              },
+              {
+                "source": "system32/d3d10core.dll",
+                "target": "\${system32}/d3d10core.dll"
+              },
+              {
+                "source": "system32/d3d11.dll",
+                "target": "\${system32}/d3d11.dll"
+              },
+              {
+                "source": "system32/dxgi.dll",
+                "target": "\${system32}/dxgi.dll"
+              },
+              {
+                "source": "syswow64/d3d9.dll",
+                "target": "\${syswow64}/d3d9.dll"
+              },
+              {
+                "source": "syswow64/d3d10core.dll",
+                "target": "\${syswow64}/d3d10core.dll"
+              },
+              {
+                "source": "syswow64/d3d11.dll",
+                "target": "\${syswow64}/d3d11.dll"
+              },
+              {
+                "source": "syswow64/dxgi.dll",
+                "target": "\${syswow64}/dxgi.dll"
+              }
             ]
           }
           EOF
@@ -326,18 +350,48 @@ jobs:
             "versionName": "${{ env.LATEST_TAG }}-arm64ec-gplasync-${{ env.COMMIT_HASH }}",
             "versionCode": 0,
             "description": "DXVK ${{ env.LATEST_TAG }} ARM64EC GPLAsync",
-            "author": "Blank",
+            "author": "Xnick417x",
             "files": [
-              {"source": "system32/d3d10core.dll", "target": "\${system32}/d3d10core.dll"},
-              {"source": "system32/d3d11.dll", "target": "\${system32}/d3d11.dll"},
-              {"source": "system32/d3d8.dll", "target": "\${system32}/d3d8.dll"},
-              {"source": "system32/d3d9.dll", "target": "\${system32}/d3d9.dll"},
-              {"source": "system32/dxgi.dll", "target": "\${system32}/dxgi.dll"},
-              {"source": "syswow64/d3d10core.dll", "target": "\${syswow64}/d3d10core.dll"},
-              {"source": "syswow64/d3d11.dll", "target": "\${syswow64}/d3d11.dll"},
-              {"source": "syswow64/d3d8.dll", "target": "\${syswow64}/d3d8.dll"},
-              {"source": "syswow64/d3d9.dll", "target": "\${syswow64}/d3d9.dll"},
-              {"source": "syswow64/dxgi.dll", "target": "\${syswow64}/dxgi.dll"}
+              {
+                "source": "system32/d3d10core.dll",
+                "target": "\${system32}/d3d10core.dll"
+              },
+              {
+                "source": "system32/d3d11.dll",
+                "target": "\${system32}/d3d11.dll"
+              },
+              {
+                "source": "system32/d3d8.dll",
+                "target": "\${system32}/d3d8.dll"
+              },
+              {
+                "source": "system32/d3d9.dll",
+                "target": "\${system32}/d3d9.dll"
+              },
+              {
+                "source": "system32/dxgi.dll",
+                "target": "\${system32}/dxgi.dll"
+              },
+              {
+                "source": "syswow64/d3d10core.dll",
+                "target": "\${syswow64}/d3d10core.dll"
+              },
+              {
+                "source": "syswow64/d3d11.dll",
+                "target": "\${syswow64}/d3d11.dll"
+              },
+              {
+                "source": "syswow64/d3d8.dll",
+                "target": "\${syswow64}/d3d8.dll"
+              },
+              {
+                "source": "syswow64/d3d9.dll",
+                "target": "\${syswow64}/d3d9.dll"
+              },
+              {
+                "source": "syswow64/dxgi.dll",
+                "target": "\${syswow64}/dxgi.dll"
+              }
             ]
           }
           EOF
