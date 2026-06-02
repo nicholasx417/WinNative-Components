@@ -110,6 +110,10 @@ jobs:
             "author": "Xnick417x",
             "files": [
               {
+                "source": "system32/d3d8.dll",
+                "target": "\${system32}/d3d8.dll"
+              },
+              {
                 "source": "system32/d3d9.dll",
                 "target": "\${system32}/d3d9.dll"
               },
@@ -128,6 +132,10 @@ jobs:
               {
                 "source": "system32/dxgi.dll",
                 "target": "\${system32}/dxgi.dll"
+              },
+              {
+                "source": "syswow64/d3d8.dll",
+                "target": "\${syswow64}/d3d8.dll"
               },
               {
                 "source": "syswow64/d3d9.dll",
@@ -407,6 +415,14 @@ jobs:
             "author": "Xnick417x",
             "files": [
               {
+                "source": "system32/d3d8.dll",
+                "target": "\${system32}/d3d8.dll"
+              },
+              {
+                "source": "system32/d3d9.dll",
+                "target": "\${system32}/d3d9.dll"
+              },
+              {
                 "source": "system32/d3d10core.dll",
                 "target": "\${system32}/d3d10core.dll"
               },
@@ -419,16 +435,16 @@ jobs:
                 "target": "\${system32}/d3d11on12.dll"
               },
               {
-                "source": "system32/d3d8.dll",
-                "target": "\${system32}/d3d8.dll"
-              },
-              {
-                "source": "system32/d3d9.dll",
-                "target": "\${system32}/d3d9.dll"
-              },
-              {
                 "source": "system32/dxgi.dll",
                 "target": "\${system32}/dxgi.dll"
+              },
+              {
+                "source": "syswow64/d3d8.dll",
+                "target": "\${syswow64}/d3d8.dll"
+              },
+              {
+                "source": "syswow64/d3d9.dll",
+                "target": "\${syswow64}/d3d9.dll"
               },
               {
                 "source": "syswow64/d3d10core.dll",
@@ -441,14 +457,6 @@ jobs:
               {
                 "source": "syswow64/d3d11on12.dll",
                 "target": "\${syswow64}/d3d11on12.dll"
-              },
-              {
-                "source": "syswow64/d3d8.dll",
-                "target": "\${syswow64}/d3d8.dll"
-              },
-              {
-                "source": "syswow64/d3d9.dll",
-                "target": "\${syswow64}/d3d9.dll"
               },
               {
                 "source": "syswow64/dxgi.dll",
