@@ -13,6 +13,11 @@ jobs:
     name: Build DXVK (Standard)
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout User Repo
+        uses: actions/checkout@v4
+        with:
+          path: my-repo
+
       - name: Checkout DXVK
         uses: actions/checkout@v4
         with:
@@ -77,8 +82,7 @@ jobs:
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd dxvk
-          wget https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/main/patches/dxvk-gplasync-master.patch
-          patch -p1 < dxvk-gplasync-master.patch
+          patch -p1 < ../my-repo/patch/dxvk-gplasync-master.patch
 
       - name: Build DXVK
         if: env.SHOULD_BUILD == 'true'
@@ -207,6 +211,11 @@ jobs:
     name: Build DXVK (ARM64EC)
     runs-on: ubuntu-24.04
     steps:
+      - name: Checkout User Repo
+        uses: actions/checkout@v4
+        with:
+          path: my-repo
+
       - name: Checkout DXVK
         uses: actions/checkout@v4
         with:
@@ -306,8 +315,7 @@ jobs:
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd dxvk
-          wget https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/main/patches/dxvk-gplasync-master.patch
-          patch -p1 < dxvk-gplasync-master.patch
+          patch -p1 < ../my-repo/patch/dxvk-gplasync-master.patch
 
       - name: Configure Cross-Files
         if: env.SHOULD_BUILD == 'true'
@@ -437,7 +445,7 @@ jobs:
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd packaging
-          tar -cJf ../Dxvk-${{ env.VERSION_NAME }}.wcp *    
+          tar -cJf ../Dxvk-${{ env.VERSION_NAME }}.wcp *
 
       - name: Create Release (ARM64EC)
         if: env.SHOULD_BUILD == 'true'

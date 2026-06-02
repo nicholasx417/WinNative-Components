@@ -87,8 +87,7 @@ jobs:
         run: |
           cd dxvk
           # GPLAsync Patch
-          wget https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/main/patches/dxvk-gplasync-master.patch
-          patch -p1 < dxvk-gplasync-master.patch
+          patch -p1 < ../my-repo/patch/dxvk-gplasync-master.patch
           
           # Binary Semaphores Patch
           git apply --verbose ../my-repo/${{ env.BINSEM_PATCH }}
@@ -326,8 +325,7 @@ jobs:
         run: |
           cd dxvk
           # GPLAsync Patch
-          wget https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/main/patches/dxvk-gplasync-master.patch
-          patch -p1 < dxvk-gplasync-master.patch
+          patch -p1 < ../my-repo/patch/dxvk-gplasync-master.patch
           
           # Binary Semaphores Patch
           git apply --verbose ../my-repo/${{ env.BINSEM_PATCH }}
@@ -344,6 +342,7 @@ jobs:
           windres = 'arm64ec-w64-mingw32-windres'
           widl = 'arm64ec-w64-mingw32-widl'
           pkg-config = 'pkg-config'
+          
           [host_machine]
           system = 'windows'
           cpu_family = 'aarch64'
