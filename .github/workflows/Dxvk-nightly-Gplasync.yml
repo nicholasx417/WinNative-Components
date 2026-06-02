@@ -1,4 +1,3 @@
-```yaml
 name: Build DXVK Combined
 
 on:
@@ -21,22 +20,28 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Setup DXVK Source
-        run: |
-          git clone --recursive https://github.com/doitsujin/dxvk dxvk
-          cd dxvk
-          echo "COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-          echo "UPSTREAM_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+      - name: Checkout DXVK
+        uses: actions/checkout@v4
+        with:
+          repository: doitsujin/dxvk
+          path: dxvk
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Check for Updates
         id: check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          cd dxvk
+          COMMIT_HASH=$(git rev-parse --short HEAD)
+          echo "UPSTREAM_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          echo "COMMIT_HASH=${COMMIT_HASH}" >> $GITHUB_ENV
+          
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "SHOULD_BUILD=true" >> $GITHUB_ENV
           else
-            if gh release list --repo ${{ github.repository }} --limit 100 | grep -q "dxvk-nightly-${{ env.COMMIT_HASH }}"; then
+            if gh release list --repo ${{ github.repository }} --limit 100 | grep -q "dxvk-nightly-$COMMIT_HASH"; then
               echo "SHOULD_BUILD=false" >> $GITHUB_ENV
             else
               echo "SHOULD_BUILD=true" >> $GITHUB_ENV
@@ -57,6 +62,23 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y meson ninja-build mingw-w64 glslang-tools wine ccache
+
+      - name: Setup ccache
+        if: env.SHOULD_BUILD == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .ccache
+          key: ccache-dxvk-standard-${{ env.UPSTREAM_HASH }}
+          restore-keys: |
+            ccache-dxvk-standard-
+
+      - name: Configure ccache
+        if: env.SHOULD_BUILD == 'true'
+        run: |
+          mkdir -p .ccache
+          echo "CCACHE_DIR=$PWD/.ccache" >> $GITHUB_ENV
+          echo "CCACHE_COMPRESS=1" >> $GITHUB_ENV
+          echo "CCACHE_MAXSIZE=500M" >> $GITHUB_ENV
 
       - name: Apply Local Patch
         if: env.SHOULD_BUILD == 'true'
@@ -80,6 +102,7 @@ jobs:
           mkdir -p packaging/system32 packaging/syswow64
           cp dxvk-built/dxvk-master/x64/*.dll packaging/system32/
           cp dxvk-built/dxvk-master/x32/*.dll packaging/syswow64/
+          
           cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
@@ -128,20 +151,30 @@ jobs:
             sleep 2
           done
 
-      - name: Update Dashboard
+      - name: Update Dashboard (Standard)
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd repo
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/dxvk-nightly-${{ env.COMMIT_HASH }}/${{ env.VERSION_NAME }}.wcp"
           BRANCH_NAME="${{ github.ref_name }}"
+          
           git checkout $BRANCH_NAME 2>/dev/null || git checkout -b $BRANCH_NAME
-          git pull origin $BRANCH_NAME --rebase
-          sed -i "/\*\*DXVK\*\* (GPLAsync)/ s|\[\*\*Download Latest\*\*\]([^)]*)|[**Download Latest**]($DOWNLOAD_URL)|" README.md
-          git add README.md
-          git commit -m "Update dashboard for DXVK Standard ${{ env.COMMIT_HASH }}" || echo "Nothing to commit"
-          git push origin $BRANCH_NAME
+          
+          n=0
+          until [ "$n" -ge 5 ]
+          do
+             git pull origin $BRANCH_NAME --rebase
+             sed -i "/\*\*DXVK\*\* (GPLAsync)/ s|\[\*\*Download Latest\*\*\]([^)]*)|[**Download Latest**]($DOWNLOAD_URL)|" README.md
+             git add README.md
+             git commit -m "Update dashboard for DXVK Standard ${{ env.COMMIT_HASH }}" || echo "Nothing to commit"
+             if git push origin $BRANCH_NAME; then exit 0; fi
+             n=$((n+1))
+             sleep 15
+          done
+          exit 1
 
   build-arm64ec:
     name: Build DXVK (ARM64EC)
@@ -154,12 +187,13 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Setup DXVK Source
-        run: |
-          git clone --recursive https://github.com/doitsujin/dxvk dxvk
-          cd dxvk
-          echo "COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-          echo "UPSTREAM_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+      - name: Checkout DXVK
+        uses: actions/checkout@v4
+        with:
+          repository: doitsujin/dxvk
+          path: dxvk
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Check for Updates
         id: check
@@ -167,10 +201,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dxvk
+          COMMIT_HASH=$(git rev-parse --short HEAD)
+          echo "UPSTREAM_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          echo "COMMIT_HASH=${COMMIT_HASH}" >> $GITHUB_ENV
+          
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "SHOULD_BUILD=true" >> $GITHUB_ENV
           else
-            if gh release list --repo ${{ github.repository }} --limit 100 | grep -q "dxvk-arm64ec-nightly-${{ env.COMMIT_HASH }}"; then
+            if gh release list --repo ${{ github.repository }} --limit 100 | grep -q "dxvk-arm64ec-nightly-$COMMIT_HASH"; then
               echo "SHOULD_BUILD=false" >> $GITHUB_ENV
             else
               echo "SHOULD_BUILD=true" >> $GITHUB_ENV
@@ -207,6 +245,23 @@ jobs:
           tar -xf llvm.tar.xz
           echo "$PWD/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64/bin" >> $GITHUB_PATH
 
+      - name: Setup ccache
+        if: env.SHOULD_BUILD == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .ccache
+          key: ccache-dxvk-arm64ec-${{ env.UPSTREAM_HASH }}
+          restore-keys: |
+            ccache-dxvk-arm64ec-
+
+      - name: Configure ccache
+        if: env.SHOULD_BUILD == 'true'
+        run: |
+          mkdir -p .ccache
+          echo "CCACHE_DIR=$PWD/.ccache" >> $GITHUB_ENV
+          echo "CCACHE_COMPRESS=1" >> $GITHUB_ENV
+          echo "CCACHE_MAXSIZE=500M" >> $GITHUB_ENV
+
       - name: Apply Local Patch
         if: env.SHOULD_BUILD == 'true'
         run: |
@@ -231,6 +286,7 @@ jobs:
           cpu = 'aarch64'
           endian = 'little'
           EOF
+
           cat <<EOF > x86.txt
           [binaries]
           c = 'i686-w64-mingw32-clang'
@@ -314,7 +370,7 @@ jobs:
             sleep 2
           done
 
-      - name: Update Dashboard
+      - name: Update Dashboard (ARM64EC)
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd repo
@@ -323,10 +379,16 @@ jobs:
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/dxvk-arm64ec-nightly-${{ env.COMMIT_HASH }}/${{ env.VERSION_NAME }}.wcp"
           BRANCH_NAME="${{ github.ref_name }}"
           git checkout $BRANCH_NAME 2>/dev/null || git checkout -b $BRANCH_NAME
-          git pull origin $BRANCH_NAME --rebase
-          sed -i "/\*\*DXVK\*\* (ARM64EC)/ s|\[\*\*Download Latest\*\*\]([^)]*)|[**Download Latest**]($DOWNLOAD_URL)|" README.md
-          git add README.md
-          git commit -m "Update dashboard for DXVK ARM64EC ${{ env.COMMIT_HASH }}" || echo "Nothing to commit"
-          git push origin $BRANCH_NAME
-
-```
+          
+          n=0
+          until [ "$n" -ge 5 ]
+          do
+             git pull origin $BRANCH_NAME --rebase
+             sed -i "/\*\*DXVK\*\* (ARM64EC)/ s|\[\*\*Download Latest\*\*\]([^)]*)|[**Download Latest**]($DOWNLOAD_URL)|" README.md
+             git add README.md
+             git commit -m "Update dashboard for DXVK ARM64EC ${{ env.COMMIT_HASH }}" || echo "Nothing to commit"
+             if git push origin $BRANCH_NAME; then exit 0; fi
+             n=$((n+1))
+             sleep 15
+          done
+          exit 1
