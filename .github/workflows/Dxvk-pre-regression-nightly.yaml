@@ -134,10 +134,6 @@ jobs:
                 "target": "\${system32}/d3d11.dll"
               },
               {
-                "source": "system32/d3d11on12.dll",
-                "target": "\${system32}/d3d11on12.dll"
-              },
-              {
                 "source": "system32/dxgi.dll",
                 "target": "\${system32}/dxgi.dll"
               },
@@ -156,10 +152,6 @@ jobs:
               {
                 "source": "syswow64/d3d11.dll",
                 "target": "\${syswow64}/d3d11.dll"
-              },
-              {
-                "source": "syswow64/d3d11on12.dll",
-                "target": "\${syswow64}/d3d11on12.dll"
               },
               {
                 "source": "syswow64/dxgi.dll",
@@ -410,7 +402,6 @@ jobs:
             cp "dxvk/$SRC_DIR/src/d3d9/d3d9.dll" "$DEST_DIR/"
             cp "dxvk/$SRC_DIR/src/d3d8/d3d8.dll" "$DEST_DIR/" || true
             cp "dxvk/$SRC_DIR/src/dxgi/dxgi.dll" "$DEST_DIR/"
-            find "dxvk/$SRC_DIR" -name "d3d11on12.dll" -exec cp {} "$DEST_DIR/" \; || true
           }
 
           copy_dll "build-ec" "packaging/system32"
@@ -444,10 +435,6 @@ jobs:
                 "target": "\${system32}/d3d11.dll"
               },
               {
-                "source": "system32/d3d11on12.dll",
-                "target": "\${system32}/d3d11on12.dll"
-              },
-              {
                 "source": "system32/dxgi.dll",
                 "target": "\${system32}/dxgi.dll"
               },
@@ -466,10 +453,6 @@ jobs:
               {
                 "source": "syswow64/d3d11.dll",
                 "target": "\${syswow64}/d3d11.dll"
-              },
-              {
-                "source": "syswow64/d3d11on12.dll",
-                "target": "\${syswow64}/d3d11on12.dll"
               },
               {
                 "source": "syswow64/dxgi.dll",
