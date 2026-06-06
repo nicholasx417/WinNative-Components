@@ -48,15 +48,15 @@
     "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-3.0.1.wcp"
   },
   {
-    "type": "Wine",
-    "verName": "wine-9.20-x86_64",
+    "type": "Proton",
+    "verName": "11-B5-x86-64-Steam.wcp",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Wine/wine-9.20-x86_64.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11-B5-x86-64-Steam.wcp"
   },
   {
     "type": "Proton",
-    "verName": "Proton-10-arm64ec-coffincolors",
+    "verName": "11-B5-Arm64ec-Steam",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Proton/Proton-10-arm64ec-coffincolors.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11-B5-Arm64EC-Steam.wcp"
   }
 ]
