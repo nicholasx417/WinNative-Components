@@ -355,9 +355,9 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-10-arm64ec-coffincolors",
+    "verName": "Proton-10-arm64ec-original",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-10-arm64ec-coffincolors.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-10-arm64ec-original.wcp"
   },
   {
     "type": "Proton",
@@ -559,9 +559,9 @@
   },
   {
     "type": "Wine",
-    "verName": "Wine-9.20-x86_64",
+    "verName": "Wine-9.20-x86_64-original",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Wine/Wine-9.20-x86_64.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Wine/Wine-9.20-x86_64-original.wcp"
   },
   {
     "type": "Wine",
