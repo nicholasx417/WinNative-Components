@@ -50,7 +50,7 @@ For Driver manager URL. Paste main repo URL.
 | **FEXCore** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2605-e02953dc1/FEXCore-2605-e02953dc1.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=fex-nightly+NOT+Weekly&expanded=true) |
 | **Box64** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.3-e2345d735/Box64-0.4.3-e2345d735.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=box64%2B+NOT+WOWBox+NOT+Stable+NOT+Bionic+NOT+MinGW&expanded=true) |
 | **Box64** (Bionic - wip) | [**Download Latest**](https://github.com/nicholasx417/WinNative-components/releases/download/bionic-box64-nightly-0.4.3-0a7b7d4f6/Bionic-Box64-0.4.3-0a7b7d4f6.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=bionic+box64+NOT+Stable+NOT+MinGW&expanded=true) |
-| **WOWBox64** | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-7a52697f9/WOWBox64-0.4.3-7a52697f9.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=WOWBox64%2B+NOT+Stable&expanded=true) |
+| **WOWBox64** | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-e2345d735/WOWBox64-0.4.3-e2345d735.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=WOWBox64%2B+NOT+Stable&expanded=true) |
 
 ### Stable Builds
 
