@@ -380,7 +380,7 @@ jobs:
         with:
           tag_name: d7vk-arm64ec-nightly-${{ env.COMMIT_HASH }}
           files: '*.wcp'
-          name: "D7VK arm64ec nightly ${{ env.VERSION_NAME }}"
+          name: "D7VK nightly ${{ env.VERSION_NAME }}"
           body: |
             Automated nightly build of D7VK (ARM64EC).
             Commit: https://github.com/WinterSnowfall/d7vk/commit/${{ env.COMMIT_HASH }}
