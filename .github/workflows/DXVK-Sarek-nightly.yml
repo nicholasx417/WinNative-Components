@@ -450,7 +450,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: DXVK-Sarek-ARM64EC-${{ env.COMMIT_HASH }}
-          path: Dxvk-Sarek-${{ env.VERSION_NAME }}.wcp
+          path: Dxvk-Sarek-arm64ec-${{ env.VERSION_NAME }}.wcp
 
       - name: Create Release (ARM64EC)
         if: env.SHOULD_BUILD == 'true'
