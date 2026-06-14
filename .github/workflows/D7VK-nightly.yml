@@ -50,7 +50,7 @@ jobs:
         run: |
           cd d7vk
           git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 | sed 's/^v//')
+          LATEST_TAG=$(git describe --tags --abbrev=0 | sed 's/^v//;s/_WIP//')
           echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
           echo "VERSION_NAME=${LATEST_TAG}-${COMMIT_HASH}" >> $GITHUB_ENV
 
@@ -222,7 +222,7 @@ jobs:
         run: |
           cd d7vk
           git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 | sed 's/^v//')
+          LATEST_TAG=$(git describe --tags --abbrev=0 | sed 's/^v//;s/_WIP//')
           echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
           echo "VERSION_NAME=${LATEST_TAG}-arm64ec-${COMMIT_HASH}" >> $GITHUB_ENV
 
