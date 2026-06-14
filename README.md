@@ -64,7 +64,8 @@ For Driver manager URL. Paste main repo URL.
 | **Box64** (Standard) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-Box64) |
 | **WOWBox64** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-wowbox64) |
 | **DXVK Sarek** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Sarek) |
-
+| **D7VK** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/D7VK) |
+| **D7VK** (ARM64EC)| [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/D7-arm) |
 
 ### Wine Layers (Bionic)
 [**Download Assets**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Wine)
