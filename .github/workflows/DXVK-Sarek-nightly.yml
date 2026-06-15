@@ -94,7 +94,7 @@ jobs:
           cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
-            "versionName": "${{ env.LATEST_TAG }}-Sarek-${{ env.COMMIT_HASH }}",
+            "versionName": "${{ env.LATEST_TAG }}-Sarek-async-${{ env.COMMIT_HASH }}",
             "versionCode": 0,
             "description": "DXVK-Sarek ${{ env.LATEST_TAG }} ${{ env.COMMIT_HASH }}",
             "author": "Xnick417x",
@@ -387,7 +387,7 @@ jobs:
           cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
-            "versionName": "${{ env.LATEST_TAG }}-Sarek-arm64ec-${{ env.COMMIT_HASH }}",
+            "versionName": "${{ env.LATEST_TAG }}-Sarek-arm64ec-async-${{ env.COMMIT_HASH }}",
             "versionCode": 0,
             "description": "DXVK-Sarek arm64ec ${{ env.LATEST_TAG }} ${{ env.COMMIT_HASH }}",
             "author": "Xnick417x",
