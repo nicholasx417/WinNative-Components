@@ -97,7 +97,7 @@ jobs:
           cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
-            "versionName": "${{ env.VERSION_NAME }}-${{ env.COMMIT_HASH }}",
+            "versionName": "${{ env.VERSION_NAME }}-Sarek-${{ env.COMMIT_HASH }}",
             "versionCode": 0,
             "description": "DXVK-Sarek ${{ env.LATEST_TAG }} ${{ env.COMMIT_HASH }}",
             "author": "Xnick417x",
@@ -390,7 +390,7 @@ jobs:
           cat <<EOF > packaging/profile.json
           {
             "type": "DXVK",
-            "versionName": "${{ env.LATEST_TAG }}-sarek-arm64ec-${{ env.COMMIT_HASH }}",
+            "versionName": "${{ env.LATEST_TAG }}-Sarek-arm64ec-${{ env.COMMIT_HASH }}",
             "versionCode": 0,
             "description": "DXVK-Sarek arm64ec ${{ env.LATEST_TAG }} ${{ env.COMMIT_HASH }}",
             "author": "Xnick417x",
@@ -443,7 +443,7 @@ jobs:
         if: env.SHOULD_BUILD == 'true'
         run: |
           cd packaging
-          tar -cJf ../Dxvk-Sarek-${{ env.VERSION_NAME }}.wcp *
+          tar -cJf ../Dxvk-Sarek-arm64ec-${{ env.VERSION_NAME }}.wcp *
 
       - name: Upload Artifact
         if: env.SHOULD_BUILD == 'true'
