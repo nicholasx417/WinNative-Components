@@ -29,7 +29,6 @@ For Driver manager URL. Paste main repo URL.
 * **VKD3D:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Vkd3d-nightly+arm.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Vkd3d-nightly+arm.yml)
 * **FEXCore:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/FexCore-nightly.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/FexCore-nightly.yml)
 * **Box64 / WOWBox64:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Box64-nightly+Wowbox.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Box64-nightly+Wowbox.yml)
-* **Box64 (WIP):** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Box64-bionic.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Box64-bionic.yml)
 
 ---
 
@@ -50,7 +49,11 @@ For Driver manager URL. Paste main repo URL.
 | **FEXCore** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2605-e12bd2710/FEXCore-2605-e12bd2710.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=fex-nightly+NOT+Weekly&expanded=true) |
 | **Box64** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.3-3f747727f/Box64-0.4.3-3f747727f.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=box64%2B+NOT+WOWBox+NOT+Stable+NOT+Bionic+NOT+MinGW&expanded=true) |
 | **Box64** (Bionic - wip) | [**Download Latest**](https://github.com/nicholasx417/WinNative-components/releases/download/bionic-box64-nightly-0.4.3-0a7b7d4f6/Bionic-Box64-0.4.3-0a7b7d4f6.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=bionic+box64+NOT+Stable+NOT+MinGW&expanded=true) |
-| **WOWBox64** | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-3f747727f/WOWBox64-0.4.3-3f747727f.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=WOWBox64%2B+NOT+Stable&expanded=true) |
+| **WOWBox64** | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-8f445d9a0/WOWBox64-0.4.3-8f445d9a0.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=WOWBox64%2B+NOT+Stable&expanded=true) |
+| **D7VK** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-a453eee10/D7vk-1.12-a453eee10.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=D7VK+Nightly+standard&expanded=true) |
+| **D7VK** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-a453eee10/D7vk-1.12-arm64ec-a453eee10.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=D7vk-arm64ec-nightly&expanded=true) |
+| **DXVK-Sarek** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-56406b00/Dxvk-Sarek-1.12.0-56406b00.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Sarek+nightly+NOT+ARM64EC&expanded=true) |
+| **DXVK-Sarek** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-56406b00/Dxvk-Sarek-arm64ec-1.12.0-56406b00.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Sarek+nightly+ARM64EC&expanded=true) |
 
 ### Stable Builds
 
@@ -64,7 +67,8 @@ For Driver manager URL. Paste main repo URL.
 | **Box64** (Standard) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-Box64) |
 | **WOWBox64** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-wowbox64) |
 | **DXVK Sarek** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Sarek) |
-
+| **D7VK** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/D7VK) |
+| **D7VK** (ARM64EC)| [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/D7-arm) |
 
 ### Wine Layers (Bionic)
 [**Download Assets**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Wine)
@@ -102,6 +106,7 @@ Third-party components used for packaging (such as DXVK, Wine, vkd3d-proton, FEX
 * DXVK [**Philip Rebohle**](https://github.com/doitsujin)
 * DXVK-Sarek [**pythonlover02**](https://github.com/pythonlover02)
 * DXVK-GPLAsync Patch [**Ph42oN**](https://gitlab.com/Ph42oN)
+* D7VK [**WinterSnowfall**](https://github.com/WinterSnowfall)
 * VKD3D [**Hans-Kristian Arntzen**](https://github.com/HansKristian-Work)
 * Freedreno Turnip Driver [**Mesa**](https://gitlab.freedesktop.org/mesa/mesa)
 * Winlator [**Bruno**](https://github.com/brunodev85/winlator)

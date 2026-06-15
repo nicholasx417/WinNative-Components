@@ -31,6 +31,10 @@ jobs:
           nightly_targets = [
               ("DXVK", "dxvk-nightly-"),
               ("DXVK", "dxvk-arm64ec-nightly-"),
+              ("DXVK", "dxvk-sarek-nightly-"),
+              ("DXVK", "dxvk-sarek-arm64ec-nightly-"),
+              ("D7VK", "d7vk-nightly-"),
+              ("D7VK", "d7vk-arm64ec-nightly-"),
               ("VKD3D", "vkd3d-nightly-"),
               ("VKD3D", "vkd3d-arm64ec-nightly-"),
               ("FEXCore", "fex-nightly-"),
@@ -42,6 +46,8 @@ jobs:
           stable_targets = [
               ("DXVK", "Stable-Dxvk"),
               ("DXVK", "Stable-Arm64ec-Dxvk"),
+              ("D7VK", "D7VK"),
+              ("D7VK", "D7-arm"),
               ("VKD3D", "Stable-VKD3D"),
               ("VKD3D", "Stable-arm64ec-VKD3D"),
               ("FEXCore", "Stable-FEX"),
