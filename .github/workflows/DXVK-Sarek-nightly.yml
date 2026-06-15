@@ -376,6 +376,7 @@ jobs:
             cp "dxvk/$SRC_DIR/src/d3d9/d3d9.dll" "$DEST_DIR/"
             cp "dxvk/$SRC_DIR/src/d3d8/d3d8.dll" "$DEST_DIR/" || true
             cp "dxvk/$SRC_DIR/src/dxgi/dxgi.dll" "$DEST_DIR/"
+            cp "dxvk/$SRC_DIR/src/ddraw/ddraw.dll" "$DEST_DIR/" || true
           }
 
           copy_dll "build-ec" "packaging/system32"
