@@ -35,7 +35,7 @@ For Driver manager URL. Paste main repo URL.
 
 ### _When using 2.7.1 Pre-Regress make sure to use the variable_
 
- `DXVK_DISABLE_TIMELINE_SEMAPHORES=1`
+ `DXVK_DISABLE_TIMELINE_SEMAPHORES=1` 
 
 ### Downloads
 
