@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '14 3 * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - D7    
 
 permissions:
   contents: write
