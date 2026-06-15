@@ -139,6 +139,10 @@ jobs:
                 "source": "syswow64/dxgi.dll",
                 "target": "\${syswow64}/dxgi.dll"
               }
+              {
+                "source": "syswow64/ddraw.dll",
+                "target": "\${syswow64}/ddraw.dll"
+              }
             ]
           }
           EOF
@@ -432,6 +436,10 @@ jobs:
               {
                 "source": "syswow64/dxgi.dll",
                 "target": "\${syswow64}/dxgi.dll"
+              }
+              {
+                "source": "syswow64/ddraw.dll",
+                "target": "\${syswow64}/ddraw.dll"
               }
             ]
           }
