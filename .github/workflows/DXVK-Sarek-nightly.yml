@@ -380,7 +380,6 @@ jobs:
             cp "dxvk/$SRC_DIR/src/d3d9/d3d9.dll" "$DEST_DIR/"
             cp "dxvk/$SRC_DIR/src/d3d8/d3d8.dll" "$DEST_DIR/" || true
             cp "dxvk/$SRC_DIR/src/dxgi/dxgi.dll" "$DEST_DIR/"
-            cp "dxvk/$SRC_DIR/src/ddraw/ddraw.dll" "$DEST_DIR/" || true
           }
 
           copy_dll "build-ec" "packaging/system32"
@@ -388,6 +387,8 @@ jobs:
 
           llvm-strip --strip-all packaging/system32/*.dll
           llvm-strip --strip-all packaging/syswow64/*.dll
+
+          cp dxvk/build-x86/src/ddraw/ddraw.dll packaging/syswow64/ || true
 
           cat <<EOF > packaging/profile.json
           {
