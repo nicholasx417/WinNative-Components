@@ -72,6 +72,144 @@
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Box64/Box64-0.3.2.wcp"
   },
   {
+    "type": "D7VK",
+    "verName": "D7vk-1.12-a453eee10",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-a453eee10/D7vk-1.12-a453eee10.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7vk-1.12-arm64ec-a453eee10",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-a453eee10/D7vk-1.12-arm64ec-a453eee10.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.11",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.11.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.11-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.11-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.10",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.10.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.10-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.10-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.9",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.9.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.9-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.9-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.8",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.8.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.8-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.8-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.7",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.7.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.7-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.7-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.6",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.6.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.6-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.6-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.5",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.5.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.5-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.5-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.4",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.4.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.4-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.4-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.3",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.3.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.3-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.3-arm64ec.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.2",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7VK/D7VK-1.2.wcp"
+  },
+  {
+    "type": "D7VK",
+    "verName": "D7VK-1.2-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/D7-arm/D7VK-1.2-arm64ec.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-Sarek-arm64ec-1.12.0-56406b00",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-56406b00/Dxvk-Sarek-arm64ec-1.12.0-56406b00.wcp"
+  },
+  {
     "type": "DXVK",
     "verName": "Dxvk-2.7.1-gplasync",
     "verCode": "0",
@@ -184,6 +322,12 @@
     "verName": "Dxvk-sarek-1.12",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-sarek-1.12.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-Sarek-1.12.0-56406b00",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-56406b00/Dxvk-Sarek-1.12.0-56406b00.wcp"
   },
   {
     "type": "DXVK",
