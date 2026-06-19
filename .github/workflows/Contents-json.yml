@@ -33,6 +33,8 @@ jobs:
               ("DXVK", "dxvk-arm64ec-nightly-"),
               ("DXVK", "dxvk-sarek-nightly-"),
               ("DXVK", "dxvk-sarek-arm64ec-nightly-"),
+              ("DXVK", "dxvk-pre-regress-nightly-"),
+              ("DXVK", "dxvk-arm64ec-pre-regress-nightly-"),
               ("D7VK", "d7vk-nightly-"),
               ("D7VK", "d7vk-arm64ec-nightly-"),
               ("VKD3D", "vkd3d-nightly-"),
