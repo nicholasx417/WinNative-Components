@@ -55,7 +55,7 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-11-B5-Arm64ec-Steam",
+    "verName": "Proton-11-B5-arm64ec-Steam",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11-B5-Arm64EC-Steam.wcp"
   }
