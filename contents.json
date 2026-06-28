@@ -73,15 +73,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-1.12-arm64ec-21dc01b5c",
+    "verName": "D7vk-1.12-92a22de8b",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-21dc01b5c/D7vk-1.12-arm64ec-21dc01b5c.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-92a22de8b/D7vk-1.12-92a22de8b.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-1.12-21dc01b5c",
+    "verName": "D7vk-1.12-arm64ec-92a22de8b",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-21dc01b5c/D7vk-1.12-21dc01b5c.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-92a22de8b/D7vk-1.12-arm64ec-92a22de8b.wcp"
   },
   {
     "type": "D7VK",
@@ -205,9 +205,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-arm64ec-1.12.0-fa3f9031",
+    "verName": "Dxvk-Sarek-arm64ec-1.12.0-84dbc25e",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-fa3f9031/Dxvk-Sarek-arm64ec-1.12.0-fa3f9031.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-84dbc25e/Dxvk-Sarek-arm64ec-1.12.0-84dbc25e.wcp"
   },
   {
     "type": "DXVK",
@@ -223,27 +223,27 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0-arm64ec-0b49a398",
+    "verName": "Dxvk-3.0-arm64ec-a4f7d106",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-0b49a398/Dxvk-3.0-arm64ec-0b49a398.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-a4f7d106/Dxvk-3.0-arm64ec-a4f7d106.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0-arm64ec-pre-regress-0b49a398",
+    "verName": "Dxvk-3.0-arm64ec-pre-regress-a4f7d106",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-0b49a398/Dxvk-3.0-arm64ec-pre-regress-0b49a398.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-a4f7d106/Dxvk-3.0-arm64ec-pre-regress-a4f7d106.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0-gplasync-0b49a398",
+    "verName": "Dxvk-3.0-gplasync-a4f7d106",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-0b49a398/Dxvk-3.0-gplasync-0b49a398.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-a4f7d106/Dxvk-3.0-gplasync-a4f7d106.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0-pre-regress-0b49a398",
+    "verName": "Dxvk-3.0-pre-regress-a4f7d106",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-0b49a398/Dxvk-3.0-pre-regress-0b49a398.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-a4f7d106/Dxvk-3.0-pre-regress-a4f7d106.wcp"
   },
   {
     "type": "DXVK",
@@ -349,9 +349,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-1.12.0-fa3f9031",
+    "verName": "Dxvk-Sarek-1.12.0-84dbc25e",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-fa3f9031/Dxvk-Sarek-1.12.0-fa3f9031.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-84dbc25e/Dxvk-Sarek-1.12.0-84dbc25e.wcp"
   },
   {
     "type": "DXVK",
@@ -421,9 +421,9 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2605-70fe9a440",
+    "verName": "FEXCore-2605-78832cc0d",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2605-70fe9a440/FEXCore-2605-70fe9a440.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2605-78832cc0d/FEXCore-2605-78832cc0d.wcp"
   },
   {
     "type": "FEXCore",
