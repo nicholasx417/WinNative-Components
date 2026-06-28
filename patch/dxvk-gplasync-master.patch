@@ -1,38 +1,8 @@
-From 55ab21b1bcd75396eca5cbc6b2d02ac08fac375a Mon Sep 17 00:00:00 2001
-From: Xnick417x <nicholas.german20@gmail.com>
-Date: Tue, 2 Jun 2026 16:57:36 +0000
-Subject: [PATCH] Fix gplasync patch for current master
-
----
- meson.build                |  7 +++++--
- src/dxvk/dxvk_context.cpp  | 20 +++++++++++++++++---
- src/dxvk/dxvk_context.h    |  4 +++-
- src/dxvk/dxvk_graphics.cpp | 20 +++++++++++++++++---
- src/dxvk/dxvk_graphics.h   | 10 ++++++++--
- src/dxvk/dxvk_image.h      | 34 ++++++++++++++++++++++++++++++++++
- src/dxvk/dxvk_options.cpp  |  1 +
- src/dxvk/dxvk_options.h    |  3 +++
- subprojects/.wraplock      |  0
- 9 files changed, 88 insertions(+), 11 deletions(-)
- create mode 100644 subprojects/.wraplock
-
 diff --git a/meson.build b/meson.build
-index d828de50..852022f3 100644
+index 7e103d76..7e4bf34f 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -36,7 +36,10 @@ if get_option('build_id')
-   ]
- endif
- 
--dxvk_include_dirs = ['./include']
-+dxvk_include_dirs = [
-+  './include',
-+  './include/native/directx',
-+]
- if fs.is_dir('./include/vulkan/include')
-   dxvk_include_dirs += ['./include/vulkan/include']
- elif not cpp.check_header('vulkan/vulkan.h')
-@@ -206,7 +209,7 @@ glsl_generator = generator(
+@@ -207,7 +207,7 @@ glsl_generator = generator(
  )
  
  dxvk_version = vcs_tag(
@@ -42,11 +12,11 @@ index d828de50..852022f3 100644
    output: 'version.h',
  )
 diff --git a/src/dxvk/dxvk_context.cpp b/src/dxvk/dxvk_context.cpp
-index 94fbc054..0f65fe51 100644
+index c84cf342..644a004d 100644
 --- a/src/dxvk/dxvk_context.cpp
 +++ b/src/dxvk/dxvk_context.cpp
-@@ -6668,7 +6668,8 @@ namespace dxvk {
-                          DxvkContextFlag::GpDirtyDepthBias));
+@@ -6719,7 +6719,8 @@ namespace dxvk {
+                 DxvkContextFlag::GpIndependentSets);
  
      // Retrieve and bind actual Vulkan pipeline handle
 -    auto pipelineInfo = m_state.gp.pipeline->getPipelineHandle(m_state.gp.state);
@@ -55,7 +25,7 @@ index 94fbc054..0f65fe51 100644
  
      if (unlikely(!pipelineInfo.handle))
        return false;
-@@ -7379,7 +7380,7 @@ namespace dxvk {
+@@ -7514,7 +7515,7 @@ namespace dxvk {
    }
  
  
@@ -64,7 +34,7 @@ index 94fbc054..0f65fe51 100644
      if (m_flags.test(DxvkContextFlag::GpDirtyRenderTargets)) {
        m_flags.clr(DxvkContextFlag::GpDirtyRenderTargets);
  
-@@ -7417,6 +7418,11 @@ namespace dxvk {
+@@ -7552,6 +7553,11 @@ namespace dxvk {
  
        m_state.om.framebufferInfo = std::move(fbInfo);
  
@@ -76,7 +46,7 @@ index 94fbc054..0f65fe51 100644
        m_flags.set(DxvkContextFlag::GpDirtyPipelineState);
      } else if (m_flags.test(DxvkContextFlag::GpRenderPassNeedsFlush)) {
        // End render pass to flush pending resolves
-@@ -7424,6 +7430,14 @@ namespace dxvk {
+@@ -7559,6 +7565,14 @@ namespace dxvk {
      }
    }
  
@@ -91,7 +61,7 @@ index 94fbc054..0f65fe51 100644
  
    bool DxvkContext::flushDeferredClear(
      const DxvkImage&              image,
-@@ -8069,7 +8083,7 @@ namespace dxvk {
+@@ -8169,7 +8183,7 @@ namespace dxvk {
      // End render pass if there are pending resolves
      if (m_flags.any(DxvkContextFlag::GpDirtyRenderTargets,
                      DxvkContextFlag::GpRenderPassNeedsFlush))
@@ -101,10 +71,10 @@ index 94fbc054..0f65fe51 100644
      if (m_flags.test(DxvkContextFlag::GpXfbActive)) {
        // If transform feedback is active and there is a chance that we might
 diff --git a/src/dxvk/dxvk_context.h b/src/dxvk/dxvk_context.h
-index dacdfd5f..e5014879 100644
+index 1867f12f..94a94eae 100644
 --- a/src/dxvk/dxvk_context.h
 +++ b/src/dxvk/dxvk_context.h
-@@ -1730,7 +1730,7 @@ namespace dxvk {
+@@ -1734,7 +1734,7 @@ namespace dxvk {
      DxvkFramebufferInfo makeFramebufferInfo(
        const DxvkRenderTargets&      renderTargets);
  
@@ -113,7 +83,7 @@ index dacdfd5f..e5014879 100644
      
      bool flushDeferredClear(
        const DxvkImage&              image,
-@@ -1870,6 +1870,8 @@ namespace dxvk {
+@@ -1874,6 +1874,8 @@ namespace dxvk {
      Rc<DxvkSampler> createBlitSampler(
              VkFilter                  filter);
  
@@ -123,10 +93,10 @@ index dacdfd5f..e5014879 100644
        const DxvkGraphicsPipelineShaders&  shaders);
  
 diff --git a/src/dxvk/dxvk_graphics.cpp b/src/dxvk/dxvk_graphics.cpp
-index 3243d86e..f498f677 100644
+index 0c4ab96d..33a7396d 100644
 --- a/src/dxvk/dxvk_graphics.cpp
 +++ b/src/dxvk/dxvk_graphics.cpp
-@@ -1076,7 +1076,8 @@ namespace dxvk {
+@@ -1081,7 +1081,8 @@ namespace dxvk {
  
  
    DxvkGraphicsPipelineHandle DxvkGraphicsPipeline::getPipelineHandle(
@@ -136,7 +106,7 @@ index 3243d86e..f498f677 100644
      DxvkGraphicsPipelineInstance* instance = this->findInstance(state);
  
      if (unlikely(!instance)) {
-@@ -1084,11 +1085,22 @@ namespace dxvk {
+@@ -1089,11 +1090,22 @@ namespace dxvk {
        if (!this->validatePipelineState(state, true))
          return DxvkGraphicsPipelineHandle();
  
@@ -160,7 +130,7 @@ index 3243d86e..f498f677 100644
          // Keep pipeline object locked, at worst we're going to stall
          // a state cache worker and the current thread needs priority.
          bool canCreateBasePipeline = this->canCreateBasePipeline(state);
-@@ -1123,7 +1135,7 @@ namespace dxvk {
+@@ -1128,7 +1140,7 @@ namespace dxvk {
  
        // Do not compile if this pipeline can be fast linked. This essentially
        // disables the state cache for pipelines that do not benefit from it.
@@ -169,22 +139,15 @@ index 3243d86e..f498f677 100644
          return;
  
        // Prevent other threads from adding new instances and check again
-@@ -1415,6 +1427,7 @@ namespace dxvk {
+@@ -1420,6 +1432,8 @@ namespace dxvk {
        entry.first->second.pipeline = handle;
        entry.first->second.status.store(status, std::memory_order_release);
  
 +      m_async = false;
++
        return handle;
      } else {
        // Pipeline already exists. Busy-wait until status becomes something
-@@ -1426,6 +1439,7 @@ namespace dxvk {
-         return status != VK_NOT_READY;
-       });
- 
-+      m_async = false;
-       return entry.first->second.pipeline;
-     }
-   }
 diff --git a/src/dxvk/dxvk_graphics.h b/src/dxvk/dxvk_graphics.h
 index 41c606c2..b990f797 100644
 --- a/src/dxvk/dxvk_graphics.h
@@ -217,7 +180,7 @@ index 41c606c2..b990f797 100644
        DxvkGraphicsPipelineStateInfo,
        DxvkGraphicsPipelineInstance>               m_pipelines;
 diff --git a/src/dxvk/dxvk_image.h b/src/dxvk/dxvk_image.h
-index 16f0e15a..5c67ff5f 100644
+index 5dac215c..536f8edb 100644
 --- a/src/dxvk/dxvk_image.h
 +++ b/src/dxvk/dxvk_image.h
 @@ -275,6 +275,37 @@ namespace dxvk {
@@ -258,7 +221,7 @@ index 16f0e15a..5c67ff5f 100644
      /**
       * \brief Checks whether this view overlaps with another one
       *
-@@ -328,6 +359,9 @@ namespace dxvk {
+@@ -329,6 +360,9 @@ namespace dxvk {
  
      std::array<const DxvkDescriptor*, ViewCount> m_views = { };
  
@@ -294,9 +257,5 @@ index 71deb596..dd07a52e 100644
      /// Shader-related options
      Tristate useRawSsbo = Tristate::Auto;
  
-diff --git a/subprojects/.wraplock b/subprojects/.wraplock
-new file mode 100644
-index 00000000..e69de29b
 -- 
-2.34.1
-
+2.53.0
