@@ -247,6 +247,18 @@
   },
   {
     "type": "DXVK",
+    "verName": "Dxvk-3.0-1-gplasync",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-3.0-1-gplasync.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-3.0-1-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Arm64ec-Dxvk/Dxvk-3.0-1-arm64ec.wcp"
+  },
+  {
+    "type": "DXVK",
     "verName": "Dxvk-2.7.1-gplasync",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-2.7.1-gplasync.wcp"
@@ -526,6 +538,12 @@
     "verName": "Proton-11.0-5-arm64ec",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-5-arm64ec.wcp"
+  },
+  {
+    "type": "Proton",
+    "verName": "Proton-11.0-5-custom-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-5-custom-arm64ec.wcp"
   },
   {
     "type": "Proton",
