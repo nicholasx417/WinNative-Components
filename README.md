@@ -40,7 +40,7 @@ For Driver manager URL. Paste main repo URL.
 
 | Component | Download | History |
 | :--- | :--- | :--- |
-| **DXVK** (GPLAsync) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-e0be8e84/Dxvk-3.0-gplasync-e0be8e84.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=dxvk-nightly+NOT+arm64ec+NOT+Weekly+NOT+Pre-Regress+NOT+Sarek&expanded=true) |
+| **DXVK** (GPLAsync) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-a9ab43b3/Dxvk-3.0-gplasync-a9ab43b3.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=dxvk-nightly+NOT+arm64ec+NOT+Weekly+NOT+Pre-Regress+NOT+Sarek&expanded=true) |
 | **DXVK** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-e0be8e84/Dxvk-3.0-arm64ec-e0be8e84.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=dxvk-arm64ec-nightly+NOT+Weekly+NOT+Pre-Regress+NOT+Sarek&expanded=true) |
 | **DXVK** (Pre-Regress Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-e0be8e84/Dxvk-3.0-pre-regress-e0be8e84.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Pre-Regress+NOT+ARM64EC&expanded=true) |
 | **DXVK** (Pre-Regress ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-e0be8e84/Dxvk-3.0-arm64ec-pre-regress-e0be8e84.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=ARM64EC+Pre-Regress&expanded=true) |
