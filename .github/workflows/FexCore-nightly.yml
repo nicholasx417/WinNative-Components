@@ -134,6 +134,8 @@ jobs:
             -DENABLE_LTO=False \
             -DENABLE_ASSERTIONS=False \
             -DBUILD_TESTING=False \
+            -DTUNE_CPU=generic \
+            -DTUNE_ARCH=generic \
             ..
 
           ninja
