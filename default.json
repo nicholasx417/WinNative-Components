@@ -1,9 +1,9 @@
 [
   {
     "type": "DXVK",
-    "verName": "Dxvk-2.7.1-gplasync",
+    "verName": "Dxvk-3.0.1-gplasync",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Stable-Dxvk/Dxvk-2.7.1-gplasync.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-3.0.1-gplasync.wcp"
   },
   {
     "type": "DXVK",
