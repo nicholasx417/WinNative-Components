@@ -427,6 +427,12 @@
   },
   {
     "type": "FEXCore",
+    "verName": "FEXCore-2607",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-FEX/FEXCore-2607.wcp"
+  },
+  {
+    "type": "FEXCore",
     "verName": "FEXCore-2607-17e563766",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2607-17e563766/FEXCore-2607-17e563766.wcp"
