@@ -355,12 +355,6 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-sarek-1.12",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-sarek-1.12.wcp"
-  },
-  {
-    "type": "DXVK",
     "verName": "Dxvk-Sarek-1.12.0-2c80828f",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-2c80828f/Dxvk-Sarek-1.12.0-2c80828f.wcp"
@@ -601,39 +595,15 @@
   },
   {
     "type": "VKD3D",
-    "verName": "Vkd3d-arm64ec-3.0a",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-3.0a.wcp"
-  },
-  {
-    "type": "VKD3D",
-    "verName": "Vkd3d-arm64ec-3.0b",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-3.0b.wcp"
-  },
-  {
-    "type": "VKD3D",
-    "verName": "Vkd3d-arm64ec-3.0.1",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-3.0.1.wcp"
-  },
-  {
-    "type": "VKD3D",
-    "verName": "Vkd3d-arm64ec-2.14.1",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-2.14.1.wcp"
-  },
-  {
-    "type": "VKD3D",
     "verName": "Vkd3d-3.0a",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-proton-3.0a.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0a.wcp"
   },
   {
     "type": "VKD3D",
     "verName": "Vkd3d-3.0b",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-proton-3.0b.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0b.wcp"
   },
   {
     "type": "VKD3D",
@@ -645,7 +615,19 @@
     "type": "VKD3D",
     "verName": "Vkd3d-3.0b-tilting",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-proton-3.0b-tilting.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0b-tilting.wcp"
+  },
+  {
+    "type": "VKD3D",
+    "verName": "Vkd3d-3.0a-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-3.0a-arm64ec.wcp"
+  },
+  {
+    "type": "VKD3D",
+    "verName": "Vkd3d-3.0b-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-3.0b-arm64ec.wcp"
   },
   {
     "type": "VKD3D",
@@ -657,7 +639,7 @@
     "type": "VKD3D",
     "verName": "Vkd3d-3.0.1",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-proton-3.0.1.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0.1.wcp"
   },
   {
     "type": "VKD3D",
@@ -667,15 +649,39 @@
   },
   {
     "type": "VKD3D",
+    "verName": "Vkd3d-3.0.1-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-3.0.1-arm64ec.wcp"
+  },
+  {
+    "type": "VKD3D",
     "verName": "Vkd3d-3.0.1-arm64ec-f1338a56",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-arm64ec-nightly-f1338a56/Vkd3d-3.0.1-arm64ec-f1338a56.wcp"
   },
   {
     "type": "VKD3D",
+    "verName": "Vkd3d-3.0.1-arm64ec-S6_9",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-3.0.1-arm64ec-S6_9.wcp"
+  },
+  {
+    "type": "VKD3D",
+    "verName": "Vkd3d-3.0.1-S6_9",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0.1-S6_9.wcp"
+  },
+  {
+    "type": "VKD3D",
     "verName": "Vkd3d-2.14.1",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-proton-2.14.1.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-2.14.1.wcp"
+  },
+  {
+    "type": "VKD3D",
+    "verName": "Vkd3d-2.14.1-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-2.14.1-arm64ec.wcp"
   },
   {
     "type": "VKD3D",
