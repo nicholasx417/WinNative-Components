@@ -43,7 +43,7 @@
   },
   {
     "type": "VKD3D",
-    "verName": "Vkd3d-arm64ec-3.0.1",
+    "verName": "Vkd3d-3.0.1-arm64ec-S6_9",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-arm64ec-3.0.1.wcp"
   },
