@@ -19,15 +19,15 @@
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.2",
+    "verName": "Box64-0.4.3-c08554e",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Stable-Box64/Box64-0.4.2.wcp"
   },
   {
     "type": "WOWBox64",
-    "verName": "Wowbox64-0.4.2",
+    "verName": "WOWbox64-0.4.3-c08554e",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-components/releases/download/Stable-wowbox64/WOWBox64-0.4.2.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-wowbox64/WOWBOX64-0.4.3-c08554e.wcp"
   },
   {
     "type": "FEXCore",
