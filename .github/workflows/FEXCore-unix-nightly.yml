@@ -326,7 +326,7 @@ jobs:
         tag_name: fex-unix-${{ env.VERSION_NAME }}-${{ env.COMMIT_HASH }}
         files: '*.wcp'
         name: "FEXCore ${{ env.VERSION_NAME }} ${{ env.COMMIT_HASH }} with unixlibs"
-        prerelease: true
+        prerelease: false
         body: |
           FEXCore build from the latest FEX commit: Wine emulator DLLs cross-
           compiled with llvm-mingw, plus the native aarch64 .so unix libs.
