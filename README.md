@@ -64,6 +64,7 @@ For Driver manager URL. Paste main repo URL.
 | **VKD3D-Proton** (Standard) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-VKD3D) |
 | **VKD3D-Proton** (ARM64EC) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-arm64ec-VKD3D) |
 | **FEXCore** (ARM64EC) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-FEX) |
+| **FEXCore-Unix** (ARM64EC) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-fex-unix) |
 | **Box64** (Standard) | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-Box64) |
 | **WOWBox64** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Stable-wowbox64) |
 | **DXVK Sarek** | [**Browse Stable Versions**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Sarek) |
