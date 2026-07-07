@@ -6,9 +6,6 @@ name: Build FEXCore - Unix
 # you can override the ref to build a specific tag/branch/SHA. Runs nightly on a
 # schedule, and can also be triggered manually with an optional ref override.
 on:
-  push:
-    branches:
-      - Unix
   schedule: 
     - cron: '14 3 * * *'
   workflow_dispatch:
