@@ -40,6 +40,7 @@ jobs:
               ("VKD3D", "vkd3d-nightly-"),
               ("VKD3D", "vkd3d-arm64ec-nightly-"),
               ("FEXCore", "fex-nightly-"),
+              ("FEXCore", "fex-unix-"),
               ("Box64", "box64-nightly-"),
               ("Box64", "bionic-box64-nightly-"),
               ("WOWBox64", "wowbox64-nightly-")
@@ -53,6 +54,7 @@ jobs:
               ("VKD3D", "Stable-VKD3D"),
               ("VKD3D", "Stable-arm64ec-VKD3D"),
               ("FEXCore", "Stable-FEX"),
+              ("FEXCore", "Stable-fex-unix"),
               ("Box64", "Stable-Box64"),
               ("WOWBox64", "Stable-wowbox64"),
               ("Wine", "Wine"),
