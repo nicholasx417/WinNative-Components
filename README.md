@@ -33,7 +33,7 @@ For Driver manager URL. Paste main repo URL.
 
 ---
 
-### _When using 2.7.1 Pre-Regress make sure to use the variable_
+### _When using 2.7.1 or above Pre-Regress variants make sure to use the variable_
 
  `DXVK_DISABLE_TIMELINE_SEMAPHORES=1` 
 
@@ -139,5 +139,5 @@ The custom build scripts and automated GitHub Actions workflows in this reposito
 ---
 
 <div align="center">
-Maintained by Xnick417, Maxjivi05, and Ribbit384 for WinNative.
+Maintained by Xnick417, Xnicholas417, and Maxjivi05 for WinNative.
 </div>
