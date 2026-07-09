@@ -210,15 +210,21 @@ jobs:
         "$CXX" --version | head -1
 
         # FEXUnixLib.cpp calls shm_open/shm_unlink, which bionic does NOT implement.
-        # Declare them so it compiles, and leave them as UNDEFINED symbols to be
-        # resolved at runtime by the WinNative wine process (--allow-shlib-undefined).
+        # Define them locally as hidden stubs so the .so is left with NO undefined
+        # symbols. Proton dlopen()s the unix component with RTLD_NOW, which binds
+        # every symbol at load time - a single UND shm_* makes dlopen fail outright
+        # and the unixlib never maps in. Stubbing them costs only FEX's optional
+        # "fex-<pid>-stats" telemetry SHM (InitializeSHM returns nullptr on fd == -1);
+        # emulation is untouched. -Wl,-z,defs makes the link fail loudly if any other
+        # bionic-missing symbol ever creeps back in.
         # No -lrt: bionic folds those into libc.
         cat > /tmp/bionic_shm_decl.h <<'HDR'
         #pragma once
         #include <sys/types.h>
+        #include <errno.h>
         extern "C" {
-        int shm_open(const char* name, int oflag, mode_t mode);
-        int shm_unlink(const char* name);
+        static inline int shm_open(const char*, int, mode_t) { errno = ENOSYS; return -1; }
+        static inline int shm_unlink(const char*)            { errno = ENOSYS; return -1; }
         }
         HDR
 
@@ -226,14 +232,30 @@ jobs:
         CXXFLAGS="-shared -fPIC -O2 -std=c++17 -g3 -gdwarf-4 -fno-omit-frame-pointer \
           -fasynchronous-unwind-tables -funwind-tables -mtune=generic \
           -include /tmp/bionic_shm_decl.h \
-          -Wl,--allow-shlib-undefined"
+          -Wl,-z,defs"
         # Same TU for both, named differently (matches FEX's two UnixLib targets).
         for name in libwow64fex libarm64ecfex; do
           "$CXX" $CXXFLAGS -o "unixlibs/${name}.so" src/Source/Windows/UnixLib/FEXUnixLib.cpp
         done
 
-        echo "Built bionic unix libs (shm_open/shm_unlink resolved at runtime by wine):"
+        echo "Built bionic unix libs (shm_open/shm_unlink stubbed in-library):"
         file unixlibs/*.so
+
+        # Hard gate: RTLD_NOW binds everything at dlopen(), so an UND shm_* here
+        # means the .so silently never loads on device. Fail the build instead.
+        NM="$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-nm"
+        for so in unixlibs/*.so; do
+          UND=$("$NM" -D --undefined-only "$so")
+          case "$UND" in
+            *shm_open*|*shm_unlink*)
+              echo "::error::$so still has undefined shm_open/shm_unlink - it will fail to dlopen under bionic"
+              echo "$UND"
+              exit 1
+              ;;
+          esac
+        done
+        echo "Verified: no undefined shm_open/shm_unlink in either .so"
+
         echo "HAVE_SO=1" >> "$GITHUB_ENV"
 
     - name: Package
