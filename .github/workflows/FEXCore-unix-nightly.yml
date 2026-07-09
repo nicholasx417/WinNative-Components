@@ -123,9 +123,14 @@ jobs:
         # FEX PPA DLL recipe (matches the fex-emu-wine PPA build flavor):
         #  - Release + CMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG -g" => DWARF debug info
         #    for the C files only (the PPA's "debug/dwarf" flavor), C++ optimized.
-        #  - CXXFLAGS env (single valid flag) instead of -DCMAKE_CXX_FLAGS, so it
-        #    doesn't corrupt FEX's `clang ${CMAKE_CXX_FLAGS} -print-libgcc-file-name`
-        #    probe (that corruption was the earlier -lgcc failure).
+        #  - CXXFLAGS env stays a SINGLE flag. FEX runs
+        #    `execute_process(COMMAND ${CMAKE_CXX_COMPILER} ${CMAKE_CXX_FLAGS}
+        #    -print-libgcc-file-name)` and CMake does not word-split a string, so a
+        #    multi-flag CMAKE_CXX_FLAGS becomes one bogus argv entry, the probe fails,
+        #    LIBGCC_PATH comes back empty, and the link dies on -lgcc. That was the
+        #    earlier failure. The probe never reads CMAKE_{C,CXX}_FLAGS_RELEASE, so
+        #    -fno-strict-aliasing / -fwrapv go there instead - same codegen effect,
+        #    no probe corruption.
         #  - INSTALL_LIBDIR=/ (PPA HostThunks path); no `ninja install` - the DLLs
         #    are copied straight out of Bin/.
         #  - TUNE_ARCH=generic + TUNE_CPU=generic => generic codegen, portable.
@@ -145,7 +150,8 @@ jobs:
           CXXFLAGS="-Wno-deprecated-enum-enum-conversion" \
           cmake -G Ninja -Wno-dev \
             -DCMAKE_BUILD_TYPE=Release \
-            -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG -g" \
+            -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG -g -fno-strict-aliasing -fwrapv" \
+            -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG -fno-strict-aliasing -fwrapv" \
             -DCMAKE_TOOLCHAIN_FILE=../Data/CMake/toolchain_mingw.cmake \
             -DMINGW_TRIPLE="${triple}-w64-mingw32" \
             -DCMAKE_INSTALL_PREFIX=/usr \
