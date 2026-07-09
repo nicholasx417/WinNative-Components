@@ -59,6 +59,7 @@ jobs:
               ("WOWBox64", "Stable-wowbox64"),
               ("Wine", "Wine"),
               ("Proton", "Proton")
+              ("Proton", "Proton-unix")
           ]
 
           def run_gh(cmd):
