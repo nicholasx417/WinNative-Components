@@ -79,15 +79,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-1.13-08327d8ce",
+    "verName": "D7vk-1.13-e24508c2a",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-08327d8ce/D7vk-1.13-08327d8ce.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-e24508c2a/D7vk-1.13-e24508c2a.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-1.13-arm64ec-bf42ff676",
+    "verName": "D7vk-1.13-arm64ec-e24508c2a",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-bf42ff676/D7vk-1.13-arm64ec-bf42ff676.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-e24508c2a/D7vk-1.13-arm64ec-e24508c2a.wcp"
   },
   {
     "type": "D7VK",
