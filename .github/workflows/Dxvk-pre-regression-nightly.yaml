@@ -295,21 +295,21 @@ jobs:
         id: cache-llvm-mingw
         uses: actions/cache@v4
         with:
-          path: llvm-mingw-20251104-ucrt-ubuntu-22.04-x86_64
-          key: llvm-mingw-20251104
+          path: llvm-mingw-20250920-ucrt-ubuntu-22.04-x86_64
+          key: llvm-mingw-bylaws-20250920
 
       - name: Setup LLVM-MinGW
         if: env.SHOULD_BUILD == 'true' && steps.cache-llvm-mingw.outputs.cache-hit != 'true'
         run: |
-          LLVM_MINGW_TAG="20251104"
-          wget -q "https://github.com/mstorsjo/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
+          LLVM_MINGW_TAG="20250920"
+          wget -q "https://github.com/bylaws/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
           tar -xf llvm.tar.xz
           rm llvm.tar.xz
 
       - name: Add LLVM-MinGW to Path
         if: env.SHOULD_BUILD == 'true'
         run: |
-          echo "$PWD/llvm-mingw-20251104-ucrt-ubuntu-22.04-x86_64/bin" >> $GITHUB_PATH
+          echo "$PWD/llvm-mingw-20250920-ucrt-ubuntu-22.04-x86_64/bin" >> $GITHUB_PATH
 
       - name: Setup ccache
         if: env.SHOULD_BUILD == 'true'
@@ -407,7 +407,8 @@ jobs:
           copy_dll "build-ec" "packaging/system32"
           copy_dll "build-x86" "packaging/syswow64"
           
-          llvm-strip --strip-all packaging/system32/*.dll
+          # system32 holds the ARM64EC DLLs - left unstripped so symbols survive.
+          # syswow64 is plain x86, stripped as before.
           llvm-strip --strip-all packaging/syswow64/*.dll
 
           cat <<EOF > packaging/profile.json
