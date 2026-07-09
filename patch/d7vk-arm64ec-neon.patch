@@ -1,0 +1,84 @@
+diff --git a/src/ddraw/d3d_neon_shim.h b/src/ddraw/d3d_neon_shim.h
+new file mode 100644
+index 0000000..0966eff
+--- /dev/null
++++ b/src/ddraw/d3d_neon_shim.h
+@@ -0,0 +1,65 @@
++#pragma once
++
++/*
++ * Minimal SSE -> NEON translation layer for d3d_process_vertices.h.
++ *
++ * llvm-mingw compiles ARM64EC as AArch64 and, for x64 data-layout compatibility,
++ * predefines __x86_64__ / __amd64__ alongside __arm64ec__. There is no SSE
++ * instruction set on ARM64EC, so clang's xmmintrin.h emits nothing and every
++ * __m128 / _mm_* reference fails to resolve. This header supplies the exact set
++ * of intrinsics d3d_process_vertices.h uses, implemented on NEON.
++ */
++
++#if defined(__arm64ec__) || defined(_M_ARM64EC) || defined(__aarch64__) || defined(_M_ARM64)
++
++#include <arm_neon.h>
++
++typedef float32x4_t __m128;
++
++#ifndef _MM_SHUFFLE
++#define _MM_SHUFFLE(z, y, x, w) (((z) << 6) | ((y) << 4) | ((x) << 2) | (w))
++#endif
++
++#define _mm_shuffle_ps(a, b, imm)                       \
++  __builtin_shufflevector((a), (b),                     \
++    (((imm) >> 0) & 0x3), (((imm) >> 2) & 0x3),         \
++    (((imm) >> 4) & 0x3) + 4, (((imm) >> 6) & 0x3) + 4)
++
++static inline __m128 _mm_setzero_ps(void)  { return vdupq_n_f32(0.0f); }
++static inline __m128 _mm_set1_ps(float a)  { return vdupq_n_f32(a); }
++static inline __m128 _mm_set_ss(float a)   { return vsetq_lane_f32(a, vdupq_n_f32(0.0f), 0); }
++
++static inline __m128 _mm_setr_ps(float a, float b, float c, float d) {
++  const float v[4] = { a, b, c, d };
++  return vld1q_f32(v);
++}
++
++static inline __m128 _mm_loadu_ps(const float* p)     { return vld1q_f32(p); }
++static inline void   _mm_storeu_ps(float* p, __m128 a) { vst1q_f32(p, a); }
++static inline void   _mm_store_ss(float* p, __m128 a)  { vst1q_lane_f32(p, a, 0); }
++static inline float  _mm_cvtss_f32(__m128 a)           { return vgetq_lane_f32(a, 0); }
++
++static inline __m128 _mm_add_ps(__m128 a, __m128 b) { return vaddq_f32(a, b); }
++static inline __m128 _mm_sub_ps(__m128 a, __m128 b) { return vsubq_f32(a, b); }
++static inline __m128 _mm_mul_ps(__m128 a, __m128 b) { return vmulq_f32(a, b); }
++static inline __m128 _mm_min_ps(__m128 a, __m128 b) { return vminq_f32(a, b); }
++static inline __m128 _mm_max_ps(__m128 a, __m128 b) { return vmaxq_f32(a, b); }
++
++static inline __m128 _mm_add_ss(__m128 a, __m128 b) {
++  return vsetq_lane_f32(vgetq_lane_f32(a, 0) + vgetq_lane_f32(b, 0), a, 0);
++}
++static inline __m128 _mm_sub_ss(__m128 a, __m128 b) {
++  return vsetq_lane_f32(vgetq_lane_f32(a, 0) - vgetq_lane_f32(b, 0), a, 0);
++}
++static inline __m128 _mm_mul_ss(__m128 a, __m128 b) {
++  return vsetq_lane_f32(vgetq_lane_f32(a, 0) * vgetq_lane_f32(b, 0), a, 0);
++}
++
++/* One Newton-Raphson step brings vrsqrte up to the ~12-bit accuracy of rsqrtss. */
++static inline __m128 _mm_rsqrt_ss(__m128 a) {
++  float32x4_t e = vrsqrteq_f32(a);
++  e = vmulq_f32(e, vrsqrtsq_f32(vmulq_f32(a, e), e));
++  return vsetq_lane_f32(vgetq_lane_f32(e, 0), a, 0);
++}
++
++#endif
+diff --git a/src/ddraw/d3d_process_vertices.h b/src/ddraw/d3d_process_vertices.h
+index 3553191..d874b4d 100644
+--- a/src/ddraw/d3d_process_vertices.h
++++ b/src/ddraw/d3d_process_vertices.h
+@@ -10,6 +10,8 @@
+ #include <utility>
+ #include <vector>
+ 
++#include "d3d_neon_shim.h"
++
+ namespace dxvk {
+ 
+   struct ProcessVerticesData {
