@@ -553,6 +553,12 @@
   },
   {
     "type": "Proton",
+    "verName": "Proton-11.0-1-custom-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-custom-arm64ec.wcp"
+  },
+  {
+    "type": "Proton",
     "verName": "Proton-10.99-arm64ec-NTSync-v5",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-10.99-arm64ec-NTSync-v5.wcp"
