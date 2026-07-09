@@ -317,6 +317,19 @@ jobs:
           endian = 'little'
           EOF
 
+      - name: Checkout Patches
+        if: env.SHOULD_BUILD == 'true'
+        uses: actions/checkout@v4
+        with:
+          path: patches
+          sparse-checkout: patch
+
+      - name: Apply ARM64EC Patch
+        if: env.SHOULD_BUILD == 'true'
+        run: |
+          cd d7vk
+          git apply -v --whitespace=nowarn "$GITHUB_WORKSPACE/patches/patch/d7vk-arm64ec-neon.patch"
+
       - name: Build
         if: env.SHOULD_BUILD == 'true'
         run: |
