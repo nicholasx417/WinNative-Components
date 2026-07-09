@@ -28,6 +28,7 @@ For Driver manager URL. Paste main repo URL.
 * **DXVK:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Dxvk-nightly-Gplasync.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Dxvk-nightly-Gplasync.yml)
 * **VKD3D:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Vkd3d-nightly+arm.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Vkd3d-nightly+arm.yml)
 * **FEXCore:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/FexCore-nightly.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/FexCore-nightly.yml)
+* **FEXCore-unix:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/FexCore-nightly.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/FexCore-unix-nightly.yml)
 * **Box64 / WOWBox64:** [![Build Status](https://img.shields.io/github/actions/workflow/status/nicholasx417/WinNative-Components/Box64-nightly+Wowbox.yml?label=Build&style=flat-square)](https://github.com/nicholasx417/WinNative-Components/actions/workflows/Box64-nightly+Wowbox.yml)
 
 ---
@@ -77,6 +78,9 @@ For Driver manager URL. Paste main repo URL.
 
 ### Proton Layers (Bionic) 
 [**Download Assets**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Proton)
+
+### Proton Layers with Unix Libs for Fex (Bionic) 
+[**Download Assets**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Proton-unix)
 
 ### Drivers
 
