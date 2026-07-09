@@ -56,14 +56,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /opt/llvm-mingw
-          key: llvm-mingw-20251104
+          key: llvm-mingw-bylaws-20250920
 
       - name: Setup Toolchain (llvm-mingw)
         if: env.SHOULD_BUILD == 'true' && steps.cache-llvm-mingw.outputs.cache-hit != 'true'
         run: |
-          LLVM_MINGW_TAG="20251104"
+          LLVM_MINGW_TAG="20250920"
           TOOLCHAIN_DIR="/opt/llvm-mingw"
-          wget -q "https://github.com/mstorsjo/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
+          wget -q "https://github.com/bylaws/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
           sudo rm -rf "$TOOLCHAIN_DIR"
           sudo mkdir -p "$TOOLCHAIN_DIR"
           sudo tar -C "$TOOLCHAIN_DIR" --strip-components=1 -xJf llvm.tar.xz
@@ -317,14 +317,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /opt/llvm-mingw
-          key: llvm-mingw-20251104
+          key: llvm-mingw-bylaws-20250920
 
       - name: Setup Toolchain (llvm-mingw)
         if: env.SHOULD_BUILD == 'true' && steps.cache-llvm-mingw.outputs.cache-hit != 'true'
         run: |
-          LLVM_MINGW_TAG="20251104"
+          LLVM_MINGW_TAG="20250920"
           TOOLCHAIN_DIR="/opt/llvm-mingw"
-          wget -q "https://github.com/mstorsjo/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
+          wget -q "https://github.com/bylaws/llvm-mingw/releases/download/$LLVM_MINGW_TAG/llvm-mingw-$LLVM_MINGW_TAG-ucrt-ubuntu-22.04-x86_64.tar.xz" -O llvm.tar.xz
           sudo rm -rf "$TOOLCHAIN_DIR"
           sudo mkdir -p "$TOOLCHAIN_DIR"
           sudo tar -C "$TOOLCHAIN_DIR" --strip-components=1 -xJf llvm.tar.xz
@@ -418,7 +418,8 @@ jobs:
           find src/build-ec -name "d3d12core.dll" -exec cp -L {} final_package/system32/ \;
           find src/build-x86 -name "d3d12.dll" -exec cp -L {} final_package/syswow64/ \;
           find src/build-x86 -name "d3d12core.dll" -exec cp -L {} final_package/syswow64/ \;
-          llvm-strip --strip-all final_package/system32/*.dll
+          # system32 holds the ARM64EC DLLs - left unstripped so symbols survive.
+          # syswow64 is plain x86, stripped as before.
           llvm-strip --strip-all final_package/syswow64/*.dll
           
           cat <<EOF > final_package/profile.json
