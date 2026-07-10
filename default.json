@@ -31,9 +31,9 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEX-2607",
+    "verName": "FEX-2607-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-FEX/FEXCore-2607.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-fex-unix/FEXCore-2607-3f98202b0+unix.wcp"
   },
   {
     "type": "VKD3D",
@@ -55,8 +55,8 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-11-B5-arm64ec-Steam",
+    "verName": "Proton-11-B5-arm64ec-steam-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11-B5-Arm64EC-Steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-11-B5-arm64ec-steam-unix.wcp"
   }
 ]
