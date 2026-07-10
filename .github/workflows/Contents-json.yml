@@ -43,7 +43,7 @@ jobs:
               ("FEXCore", "fex-unix-"),
               ("Box64", "box64-nightly-"),
               ("Box64", "bionic-box64-nightly-"),
-              ("WOWBox64", "wowbox64-nightly-")
+              ("WOWBox64", "wowbox64-nightly-"),
           ]
 
           stable_targets = [
@@ -58,8 +58,8 @@ jobs:
               ("Box64", "Stable-Box64"),
               ("WOWBox64", "Stable-wowbox64"),
               ("Wine", "Wine"),
-              ("Proton", "Proton")
-              ("Proton", "Proton-unix")
+              ("Proton", "Proton"),
+              ("Proton", "Proton-unix"),
           ]
 
           def run_gh(cmd):
