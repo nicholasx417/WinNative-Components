@@ -433,9 +433,27 @@
   },
   {
     "type": "FEXCore",
+    "verName": "FEXCore-2607-unix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-fex-unix/FEXCore-2607-unix.wcp"
+  },
+  {
+    "type": "FEXCore",
+    "verName": "FEXCore-2607-ff7a54add-unix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2607-ff7a54add/FEXCore-2607-ff7a54add-unix.wcp"
+  },
+  {
+    "type": "FEXCore",
     "verName": "FEXCore-2607-5f2455c50",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2607-5f2455c50/FEXCore-2607-5f2455c50.wcp"
+  },
+  {
+    "type": "FEXCore",
+    "verName": "FEXCore-2607-3f98202b0+unix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-fex-unix/FEXCore-2607-3f98202b0+unix.wcp"
   },
   {
     "type": "FEXCore",
@@ -523,9 +541,9 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-11-B5-Arm64EC-Steam",
+    "verName": "Proton-11-B5-arm64ec-steam-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11-B5-Arm64EC-Steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-11-B5-arm64ec-steam-unix.wcp"
   },
   {
     "type": "Proton",
@@ -553,6 +571,18 @@
   },
   {
     "type": "Proton",
+    "verName": "Proton-11.0-1-x86-64-steam",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-x86-64-steam.wcp"
+  },
+  {
+    "type": "Proton",
+    "verName": "Proton-11.0-1-arm64ec-steam-unix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-11.0-1-arm64ec-steam-unix.wcp"
+  },
+  {
+    "type": "Proton",
     "verName": "Proton-11.0-1-custom-arm64ec",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-custom-arm64ec.wcp"
@@ -568,6 +598,12 @@
     "verName": "Proton-10-arm64ec-original",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-10-arm64ec-original.wcp"
+  },
+  {
+    "type": "Proton",
+    "verName": "Proton-10-arm64ec-unix",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-10-arm64ec-unix.wcp"
   },
   {
     "type": "Proton",
@@ -589,9 +625,9 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-10.0-4-arm64ec-steam",
+    "verName": "Proton-10.0-4-arm64ec-steam-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-10.0-4-arm64ec-steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-10.0-4-arm64ec-steam-unix.wcp"
   },
   {
     "type": "Proton",
@@ -601,9 +637,9 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton.9.0-arm64ec-steam",
+    "verName": "Proton-9.0-arm64ec-steam-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton.9.0-arm64ec-steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-9.0-arm64ec-steam-unix.wcp"
   },
   {
     "type": "VKD3D",
