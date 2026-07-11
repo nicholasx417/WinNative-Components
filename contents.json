@@ -642,6 +642,12 @@
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-9.0-arm64ec-steam-unix.wcp"
   },
   {
+    "type": "Proton",
+    "verName": "Proton.9.0-arm64ec-steam",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton.9.0-arm64ec-steam.wcp"
+  },
+  {
     "type": "VKD3D",
     "verName": "Vkd3d-3.0a",
     "verCode": "0",
