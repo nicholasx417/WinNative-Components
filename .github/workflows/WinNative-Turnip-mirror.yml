@@ -1,0 +1,64 @@
+name: Mirror WinNative Turnip Drivers
+
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  SOURCE_REPO: WinNative-Emu/Drivers
+  TARGET_TAG: WinNative-Turnip
+
+jobs:
+  mirror:
+    name: Mirror Latest Turnip Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror newest upstream release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Newest upstream release only (the one marked "Latest"). Older
+          # releases are never fetched, so it starts wherever "latest" is now.
+          LATEST_JSON=$(gh api "repos/$SOURCE_REPO/releases/latest")
+          UPSTREAM_TAG=$(jq -r '.tag_name' <<< "$LATEST_JSON")
+          echo "Newest upstream release: $UPSTREAM_TAG"
+
+          # Its uploaded assets (name + url). Source archives are not in this list.
+          mapfile -t LATEST_ASSETS < <(jq -r '.assets[] | [.name, .browser_download_url] | @tsv' <<< "$LATEST_JSON")
+
+          # Ensure the target release exists. Created once if missing; an
+          # existing WinNative-Turnip release is never modified or overwritten.
+          if ! gh release view "$TARGET_TAG" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "Target release $TARGET_TAG not found - creating it."
+            gh release create "$TARGET_TAG" \
+              --repo "${{ github.repository }}" \
+              --title "WinNative-Turnip" \
+              --notes "Latest Turnip driver mirrored from https://github.com/$SOURCE_REPO/releases"
+          fi
+
+          EXISTING=$(gh release view "$TARGET_TAG" --repo "${{ github.repository }}" \
+            --json assets --jq '.assets[].name')
+
+          # Upload the newest release's assets. Anything already attached is
+          # skipped; nothing is ever removed, so older versions stay in place.
+          for ROW in "${LATEST_ASSETS[@]}"; do
+            NAME=${ROW%%$'\t'*}
+            URL=${ROW#*$'\t'}
+            if grep -Fxq "$NAME" <<< "$EXISTING"; then
+              echo "Already present: $NAME"
+              continue
+            fi
+            echo "Fetching: $NAME"
+            curl -fL -o "$NAME" "$URL"
+            gh release upload "$TARGET_TAG" "$NAME" \
+              --repo "${{ github.repository }}"
+            rm -f "$NAME"
+          done
+
+          echo "Mirror complete - $UPSTREAM_TAG."
