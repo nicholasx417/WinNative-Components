@@ -1,15 +1,15 @@
 [
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.1-gplasync",
+    "verName": "Dxvk-3.0.2-gplasync",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-3.0.1-gplasync.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Dxvk/Dxvk-3.0.2-gplasync.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.1-arm64ec-gplasync",
+    "verName": "Dxvk-3.0.2-arm64ec-gplasync",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Arm64ec-Dxvk/Dxvk-3.0.1-arm64ec-gplasync.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Arm64ec-Dxvk/Dxvk-3.0.2-arm64ec-gplasync.wcp"
   },
   {
     "type": "DXVK",
