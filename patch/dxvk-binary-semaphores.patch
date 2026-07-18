@@ -4,17 +4,17 @@ Date: Tue, 19 May 2026 10:42:23 +0800
 Subject: [PATCH] Add binary semaphore dxvk queue fallback
 
 ---
- src/dxvk/dxvk_cmdlist.cpp | 79 ++++++++++++++++++++++++++-------------
- src/dxvk/dxvk_cmdlist.h   | 10 ++++-
- src/dxvk/dxvk_queue.cpp   | 65 +++++++++++++++++++++++++-------
- src/dxvk/dxvk_queue.h     | 10 ++++-
- 4 files changed, 123 insertions(+), 41 deletions(-)
+  src/dxvk/dxvk_cmdlist.cpp | 79 +++++++++++++++++++++++++++++++----------------
+  src/dxvk/dxvk_cmdlist.h   | 10 +++++-
+  src/dxvk/dxvk_queue.cpp   | 65 ++++++++++++++++++++++++++++++--------
+  src/dxvk/dxvk_queue.h     | 10 +++++-
+  4 files changed, 123 insertions(+), 41 deletions(-)
 
 diff --git a/src/dxvk/dxvk_cmdlist.cpp b/src/dxvk/dxvk_cmdlist.cpp
-index d828b7f969a..fafb253705c 100644
+index 108ce64..2e24a24 100644
 --- a/src/dxvk/dxvk_cmdlist.cpp
 +++ b/src/dxvk/dxvk_cmdlist.cpp
-@@ -1,6 +1,7 @@
+@@ -2,6 +2,7 @@
  
  #include "dxvk_cmdlist.h"
  #include "dxvk_device.h"
@@ -22,7 +22,7 @@ index d828b7f969a..fafb253705c 100644
  
  namespace dxvk {
  
-@@ -52,7 +53,8 @@ namespace dxvk {
+@@ -60,7 +61,8 @@ namespace dxvk {
    VkResult DxvkCommandSubmission::submit(
            DxvkDevice*           device,
            VkQueue               queue,
@@ -32,7 +32,7 @@ index d828b7f969a..fafb253705c 100644
      auto vk = device->vkd();
  
      VkLatencySubmissionPresentIdNV latencyInfo = { VK_STRUCTURE_TYPE_LATENCY_SUBMISSION_PRESENT_ID_NV };
-@@ -80,8 +82,8 @@ namespace dxvk {
+@@ -88,8 +90,8 @@ namespace dxvk {
  
      VkResult vr = VK_SUCCESS;
  
@@ -43,7 +43,7 @@ index d828b7f969a..fafb253705c 100644
  
      this->reset();
      return vr;
-@@ -258,6 +260,7 @@ namespace dxvk {
+@@ -269,6 +271,7 @@ namespace dxvk {
      const auto& graphics = m_device->queues().graphics;
      const auto& transfer = m_device->queues().transfer;
      const auto& sparse = m_device->queues().sparse;
@@ -51,7 +51,7 @@ index d828b7f969a..fafb253705c 100644
  
      m_commandSubmission.reset();
  
-@@ -282,16 +285,29 @@ namespace dxvk {
+@@ -293,16 +296,29 @@ namespace dxvk {
        if (sparseBind) {
          // Sparse binding needs to serialize command execution, so wait
          // for any prior submissions, then block any subsequent ones
@@ -91,7 +91,7 @@ index d828b7f969a..fafb253705c 100644
        }
  
        // Execute transfer command buffer, if any
-@@ -303,14 +319,23 @@ namespace dxvk {
+@@ -314,14 +330,23 @@ namespace dxvk {
        // If we had either a transfer command or a semaphore wait, submit to the
        // transfer queue so that all subsequent commands get stalled as necessary.
        if (m_device->hasDedicatedTransferQueue() && !m_commandSubmission.isEmpty()) {
@@ -123,7 +123,7 @@ index d828b7f969a..fafb253705c 100644
        }
  
        // We promise to never do weird stuff to WSI images on
-@@ -344,17 +369,19 @@ namespace dxvk {
+@@ -355,17 +380,19 @@ namespace dxvk {
          }
        }
  
@@ -147,7 +147,7 @@ index d828b7f969a..fafb253705c 100644
          m_commandSubmission.signalSemaphore(semaphores.graphics,
            ++timelines.graphics, VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT);
  
-@@ -364,7 +391,7 @@ namespace dxvk {
+@@ -375,7 +402,7 @@ namespace dxvk {
  
        // Finally, submit semaphore wait on the transfer queue. If this
        // is not the final iteration, fold the wait into the next one.
@@ -157,10 +157,10 @@ index d828b7f969a..fafb253705c 100644
            timelines.graphics, VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT);
  
 diff --git a/src/dxvk/dxvk_cmdlist.h b/src/dxvk/dxvk_cmdlist.h
-index a71cbf870b4..3cef38c9ac6 100644
+index 38891eb..329fba5 100644
 --- a/src/dxvk/dxvk_cmdlist.h
 +++ b/src/dxvk/dxvk_cmdlist.h
-@@ -46,8 +46,15 @@ namespace dxvk {
+@@ -48,8 +48,15 @@ namespace dxvk {
     * One semaphore for each queue.
     */
    struct DxvkTimelineSemaphores {
@@ -176,7 +176,7 @@ index a71cbf870b4..3cef38c9ac6 100644
    };
  
  
-@@ -131,7 +138,8 @@ namespace dxvk {
+@@ -133,7 +140,8 @@ namespace dxvk {
      VkResult submit(
              DxvkDevice*           device,
              VkQueue               queue,
@@ -187,11 +187,11 @@ index a71cbf870b4..3cef38c9ac6 100644
      /**
       * \brief Resets object
 diff --git a/src/dxvk/dxvk_queue.cpp b/src/dxvk/dxvk_queue.cpp
-index 6d2d153b6b0..dac38c48a04 100644
+index c9e80c6..51d1a53 100644
 --- a/src/dxvk/dxvk_queue.cpp
 +++ b/src/dxvk/dxvk_queue.cpp
-@@ -9,6 +9,9 @@ namespace dxvk {
-     m_finishThread([this] () { finishCmdLists(); }) {
+@@ -11,6 +11,9 @@ namespace dxvk {
+     m_finishThread  ([this] () { finishCmdLists(); }) {
      auto vk = m_device->vkd();
  
 +    m_useTimeline = env::getEnvVar("DXVK_DISABLE_TIMELINE_SEMAPHORES") != "1";
@@ -200,7 +200,7 @@ index 6d2d153b6b0..dac38c48a04 100644
      VkSemaphoreTypeCreateInfo semaphoreType = { VK_STRUCTURE_TYPE_SEMAPHORE_TYPE_CREATE_INFO };
      semaphoreType.semaphoreType = VK_SEMAPHORE_TYPE_TIMELINE;
  
-@@ -40,7 +43,32 @@ namespace dxvk {
+@@ -42,7 +45,32 @@ namespace dxvk {
      vk->vkDestroySemaphore(vk->device(), m_semaphores.graphics, nullptr);
      vk->vkDestroySemaphore(vk->device(), m_semaphores.transfer, nullptr);
    }
@@ -233,7 +233,7 @@ index 6d2d153b6b0..dac38c48a04 100644
    
    void DxvkSubmissionQueue::submit(
            DxvkSubmitInfo            submitInfo,
-@@ -162,9 +190,14 @@ namespace dxvk {
+@@ -164,9 +192,14 @@ namespace dxvk {
                trackedSubmitId = entry.latency.frameId;
            }
  
@@ -251,7 +251,7 @@ index 6d2d153b6b0..dac38c48a04 100644
          } else if (entry.present.presenter != nullptr) {
            if (entry.latency.tracker)
              entry.latency.tracker->notifyQueuePresentBegin(entry.latency.frameId);
-@@ -248,18 +281,24 @@ namespace dxvk {
+@@ -253,18 +286,24 @@ namespace dxvk {
          VkResult status = m_lastError.load();
  
          if (status != VK_ERROR_DEVICE_LOST) {
@@ -287,10 +287,10 @@ index 6d2d153b6b0..dac38c48a04 100644
            if (entry.latency.tracker && status == VK_SUCCESS)
              entry.latency.tracker->notifyGpuExecutionEnd(entry.latency.frameId);
 diff --git a/src/dxvk/dxvk_queue.h b/src/dxvk/dxvk_queue.h
-index 4cc63ef6069..e3d97f23071 100644
+index 0796f0c..ed5873d 100644
 --- a/src/dxvk/dxvk_queue.h
 +++ b/src/dxvk/dxvk_queue.h
-@@ -70,6 +70,7 @@ namespace dxvk {
+@@ -71,6 +71,7 @@ namespace dxvk {
      DxvkPresentInfo     present;
      DxvkLatencyInfo     latency;
      DxvkTimelineSemaphoreValues timelines;
@@ -298,9 +298,9 @@ index 4cc63ef6069..e3d97f23071 100644
    };
  
  
-@@ -196,10 +197,17 @@ namespace dxvk {
- 
+@@ -198,10 +199,17 @@ namespace dxvk {
      DxvkDevice*                 m_device;
+     DxvkCheckpointBuffer*       m_checkpoints = nullptr;
      DxvkQueueCallback           m_callback;
 -
 +    
