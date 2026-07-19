@@ -90,6 +90,7 @@ IGI 2.icp
 IGI.icp
 Infernal.icp
 input.icp
+jedi.icp
 JoJo ASBR v2.icp
 JoJo ASBR.icp
 Journey Realm DD.icp
@@ -188,6 +189,7 @@ Unleashed.icp
 virtual controller ik.icp
 Virtual Gamepad alt.icp
 Virtual Keyboard.icp
+witcher.icp
 Wolfenstein.icp
 Worms Armageddon.icp
 Xanadu Next.icp
