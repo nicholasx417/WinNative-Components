@@ -105,6 +105,8 @@ Marvel Ultimate Alliance.icp
 Mass Effect 1 v2.icp
 Mass Effect 2-1.icp
 Mass Effect 2.icp
+Max Payne.icp
+Max Payne D-pad.icp
 MC2.icp
 Metro 2033.icp
 Mewgenics.icp
