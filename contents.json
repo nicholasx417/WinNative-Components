@@ -13,9 +13,9 @@
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.3-35ea2eedc",
+    "verName": "Box64-0.4.3-178e344b9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.3-35ea2eedc/Box64-0.4.3-35ea2eedc.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.3-178e344b9/Box64-0.4.3-178e344b9.wcp"
   },
   {
     "type": "Box64",
@@ -79,15 +79,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.0-440a54265",
+    "verName": "D7vk-2.1-149920fe9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-440a54265/D7vk-2.0-440a54265.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-149920fe9/D7vk-2.1-149920fe9.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.0-arm64ec-440a54265",
+    "verName": "D7vk-2.1-arm64ec-149920fe9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-440a54265/D7vk-2.0-arm64ec-440a54265.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-149920fe9/D7vk-2.1-arm64ec-149920fe9.wcp"
   },
   {
     "type": "D7VK",
@@ -235,33 +235,33 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-gplasync-c96835ba",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-c96835ba/Dxvk-3.0.2-gplasync-c96835ba.wcp"
-  },
-  {
-    "type": "DXVK",
-    "verName": "Dxvk-3.0.2-pre-regress-c96835ba",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-c96835ba/Dxvk-3.0.2-pre-regress-c96835ba.wcp"
-  },
-  {
-    "type": "DXVK",
     "verName": "Dxvk-3.0.2-arm64ec-gplasync",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-Arm64ec-Dxvk/Dxvk-3.0.2-arm64ec-gplasync.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-arm64ec-c96835ba",
+    "verName": "Dxvk-3.0.2-arm64ec-6c7162fb",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-c96835ba/Dxvk-3.0.2-arm64ec-c96835ba.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-6c7162fb/Dxvk-3.0.2-arm64ec-6c7162fb.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-arm64ec-pre-regress-c96835ba",
+    "verName": "Dxvk-3.0.2-arm64ec-pre-regress-6c7162fb",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-c96835ba/Dxvk-3.0.2-arm64ec-pre-regress-c96835ba.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-6c7162fb/Dxvk-3.0.2-arm64ec-pre-regress-6c7162fb.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-3.0.2-gplasync-6c7162fb",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-6c7162fb/Dxvk-3.0.2-gplasync-6c7162fb.wcp"
+  },
+  {
+    "type": "DXVK",
+    "verName": "Dxvk-3.0.2-pre-regress-6c7162fb",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-6c7162fb/Dxvk-3.0.2-pre-regress-6c7162fb.wcp"
   },
   {
     "type": "DXVK",
@@ -769,9 +769,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.3-35ea2eedc",
+    "verName": "WOWBox64-0.4.3-178e344b9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-35ea2eedc/WOWBox64-0.4.3-35ea2eedc.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.3-178e344b9/WOWBox64-0.4.3-178e344b9.wcp"
   },
   {
     "type": "WOWBox64",
