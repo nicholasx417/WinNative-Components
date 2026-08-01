@@ -74,6 +74,12 @@ jobs:
           echo "CCACHE_COMPRESS=1" >> $GITHUB_ENV
           echo "CCACHE_MAXSIZE=500M" >> $GITHUB_ENV
 
+      - name: Fix std::sqrtf for GCC
+        if: env.SHOULD_BUILD == 'true'
+        run: |
+          cd d7vk
+          grep -rl 'std::sqrtf' src | xargs -r sed -i 's/std::sqrtf(/std::sqrt(/g'
+
       - name: Build D7VK
         if: env.SHOULD_BUILD == 'true'
         run: |
