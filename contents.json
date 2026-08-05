@@ -457,15 +457,15 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2608-e869aa644",
+    "verName": "FEXCore-2608-968645416",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2608-e869aa644/FEXCore-2608-e869aa644.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2608-968645416/FEXCore-2608-968645416.wcp"
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2608-e869aa644-unix",
+    "verName": "FEXCore-2608-968645416-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2608-e869aa644/FEXCore-2608-e869aa644-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2608-968645416/FEXCore-2608-968645416-unix.wcp"
   },
   {
     "type": "FEXCore",
