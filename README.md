@@ -86,7 +86,9 @@ For Driver manager URL. Paste main repo URL.
 
 **Qualcomm** - [**System Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/System)
 
-**Turnip** - [**Stable Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Turnip)
+**Turnip (StevenMXZ)** - [**Stable Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Turnip)
+
+**Turnip (Whitebeylash)** - [**Stable Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/Belyash)
 
 **WinNative - Turnip** - [**WinNative Performance Drivers**](https://github.com/nicholasx417/WinNative-Components/releases/tag/WinNative-Turnip)
 
