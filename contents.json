@@ -1,15 +1,15 @@
 [
   {
     "type": "Box64",
-    "verName": "Bionic-Box64-0.4.5-e99ca5129",
+    "verName": "Bionic-Box64-0.4.5-78bf553c6",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-e99ca5129/Bionic-Box64-0.4.5-e99ca5129.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-78bf553c6/Bionic-Box64-0.4.5-78bf553c6.wcp"
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.5-e99ca5129",
+    "verName": "Box64-0.4.5-78bf553c6",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-e99ca5129/Box64-0.4.5-e99ca5129.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-78bf553c6/Box64-0.4.5-78bf553c6.wcp"
   },
   {
     "type": "Box64",
@@ -85,15 +85,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.1-arm64ec-7e13818eb",
+    "verName": "D7vk-2.1-39257e69f",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-7e13818eb/D7vk-2.1-arm64ec-7e13818eb.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-39257e69f/D7vk-2.1-39257e69f.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.1-7e13818eb",
+    "verName": "D7vk-2.1-arm64ec-39257e69f",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-7e13818eb/D7vk-2.1-7e13818eb.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-39257e69f/D7vk-2.1-arm64ec-39257e69f.wcp"
   },
   {
     "type": "D7VK",
@@ -781,9 +781,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.5-e99ca5129",
+    "verName": "WOWBox64-0.4.5-78bf553c6",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-e99ca5129/WOWBox64-0.4.5-e99ca5129.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-78bf553c6/WOWBox64-0.4.5-78bf553c6.wcp"
   },
   {
     "type": "WOWBox64",
