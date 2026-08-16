@@ -217,9 +217,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-arm64ec-1.12.0-a1186311",
+    "verName": "Dxvk-Sarek-arm64ec-1.12.0-e3861a10",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-a1186311/Dxvk-Sarek-arm64ec-1.12.0-a1186311.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-e3861a10/Dxvk-Sarek-arm64ec-1.12.0-e3861a10.wcp"
   },
   {
     "type": "DXVK",
@@ -379,9 +379,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-1.12.0-a1186311",
+    "verName": "Dxvk-Sarek-1.12.0-e3861a10",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-a1186311/Dxvk-Sarek-1.12.0-a1186311.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-e3861a10/Dxvk-Sarek-1.12.0-e3861a10.wcp"
   },
   {
     "type": "DXVK",
