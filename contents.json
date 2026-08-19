@@ -1,15 +1,15 @@
 [
   {
     "type": "Box64",
-    "verName": "Bionic-Box64-0.4.5-db05d0e66",
+    "verName": "Bionic-Box64-0.4.5-d1bb1d1e0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-db05d0e66/Bionic-Box64-0.4.5-db05d0e66.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-d1bb1d1e0/Bionic-Box64-0.4.5-d1bb1d1e0.wcp"
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.5-db05d0e66",
+    "verName": "Box64-0.4.5-d1bb1d1e0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-db05d0e66/Box64-0.4.5-db05d0e66.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-d1bb1d1e0/Box64-0.4.5-d1bb1d1e0.wcp"
   },
   {
     "type": "Box64",
@@ -85,15 +85,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.1-2437e5d35",
+    "verName": "D7vk-2.1-85704bfa0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-2437e5d35/D7vk-2.1-2437e5d35.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-85704bfa0/D7vk-2.1-85704bfa0.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.1-arm64ec-2437e5d35",
+    "verName": "D7vk-2.1-arm64ec-85704bfa0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-2437e5d35/D7vk-2.1-arm64ec-2437e5d35.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-85704bfa0/D7vk-2.1-arm64ec-85704bfa0.wcp"
   },
   {
     "type": "D7VK",
@@ -217,9 +217,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-arm64ec-1.12.0-8eacd4e1",
+    "verName": "Dxvk-Sarek-arm64ec-1.12.0-b57e6d08",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-8eacd4e1/Dxvk-Sarek-arm64ec-1.12.0-8eacd4e1.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-b57e6d08/Dxvk-Sarek-arm64ec-1.12.0-b57e6d08.wcp"
   },
   {
     "type": "DXVK",
@@ -247,27 +247,27 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-arm64ec-3a4c6fa3",
+    "verName": "Dxvk-3.0.2-arm64ec-5bb2a8e8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-3a4c6fa3/Dxvk-3.0.2-arm64ec-3a4c6fa3.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-nightly-5bb2a8e8/Dxvk-3.0.2-arm64ec-5bb2a8e8.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-arm64ec-pre-regress-3a4c6fa3",
+    "verName": "Dxvk-3.0.2-arm64ec-pre-regress-5bb2a8e8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-3a4c6fa3/Dxvk-3.0.2-arm64ec-pre-regress-3a4c6fa3.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-arm64ec-pre-regress-nightly-5bb2a8e8/Dxvk-3.0.2-arm64ec-pre-regress-5bb2a8e8.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-gplasync-3a4c6fa3",
+    "verName": "Dxvk-3.0.2-gplasync-5bb2a8e8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-3a4c6fa3/Dxvk-3.0.2-gplasync-3a4c6fa3.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-nightly-5bb2a8e8/Dxvk-3.0.2-gplasync-5bb2a8e8.wcp"
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-3.0.2-pre-regress-3a4c6fa3",
+    "verName": "Dxvk-3.0.2-pre-regress-5bb2a8e8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-3a4c6fa3/Dxvk-3.0.2-pre-regress-3a4c6fa3.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-pre-regress-nightly-5bb2a8e8/Dxvk-3.0.2-pre-regress-5bb2a8e8.wcp"
   },
   {
     "type": "DXVK",
@@ -457,15 +457,15 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2608-c3b4d4b7b",
+    "verName": "FEXCore-2608-f42dc7197",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2608-c3b4d4b7b/FEXCore-2608-c3b4d4b7b.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2608-f42dc7197/FEXCore-2608-f42dc7197.wcp"
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2608-c3b4d4b7b-unix",
+    "verName": "FEXCore-2608-f42dc7197-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2608-c3b4d4b7b/FEXCore-2608-c3b4d4b7b-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2608-f42dc7197/FEXCore-2608-f42dc7197-unix.wcp"
   },
   {
     "type": "FEXCore",
@@ -727,21 +727,9 @@
   },
   {
     "type": "VKD3D",
-    "verName": "Vkd3d-3.0.1-238f157e",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-nightly-238f157e/Vkd3d-3.0.1-238f157e.wcp"
-  },
-  {
-    "type": "VKD3D",
     "verName": "Vkd3d-3.0.1-arm64ec",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-arm64ec-VKD3D/Vkd3d-3.0.1-arm64ec.wcp"
-  },
-  {
-    "type": "VKD3D",
-    "verName": "Vkd3d-3.0.1-arm64ec-238f157e",
-    "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-arm64ec-nightly-238f157e/Vkd3d-3.0.1-arm64ec-238f157e.wcp"
   },
   {
     "type": "VKD3D",
@@ -751,9 +739,21 @@
   },
   {
     "type": "VKD3D",
+    "verName": "Vkd3d-3.0.1-arm64ec-4b9ab838",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-arm64ec-nightly-4b9ab838/Vkd3d-3.0.1-arm64ec-4b9ab838.wcp"
+  },
+  {
+    "type": "VKD3D",
     "verName": "Vkd3d-3.0.1-S6_9",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Stable-VKD3D/Vkd3d-3.0.1-S6_9.wcp"
+  },
+  {
+    "type": "VKD3D",
+    "verName": "Vkd3d-3.0.1-4b9ab838",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-nightly-4b9ab838/Vkd3d-3.0.1-4b9ab838.wcp"
   },
   {
     "type": "VKD3D",
@@ -781,9 +781,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.5-db05d0e66",
+    "verName": "WOWBox64-0.4.5-d1bb1d1e0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-db05d0e66/WOWBox64-0.4.5-db05d0e66.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-d1bb1d1e0/WOWBox64-0.4.5-d1bb1d1e0.wcp"
   },
   {
     "type": "WOWBox64",
