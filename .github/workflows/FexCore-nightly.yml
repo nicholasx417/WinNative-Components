@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout this repo
+      uses: actions/checkout@v4
+      with:
+        path: my-repo
+
     - name: Checkout FEX
       uses: actions/checkout@v4
       with:
@@ -20,6 +25,22 @@ jobs:
         submodules: recursive
         fetch-depth: 0
         path: src
+
+    # FEX aborts the guest process when an *optional* per-app config file fails to
+    # parse, including when it reads as empty. GetApplicationConfig() falls back to a
+    # cwd-relative "./<program>.json" when the FEX config dir cannot be created, so a
+    # guest launched from a bare drive root (D:\game.exe) picks up a path that reads
+    # empty, CreateJSON() returns null, and ERROR_AND_DIE_FMT -> ForcedAssert() ->
+    # `hlt #0x1` kills it as EXCEPTION_ILLEGAL_INSTRUCTION (0xc000001d) during
+    # ProcessInit, before any emulation. One directory deeper the file cleanly does
+    # not exist and FEX carries on -- hence D:\game.exe failing while
+    # D:\sub\game.exe worked, on the same binary.
+    # Applies cleanly to every FEX tag from FEX-2507 through current master.
+    - name: Apply FEX app-config fix
+      run: |
+        cd src
+        patch -p1 < ../my-repo/patch/fex-appconfig-nonfatal.patch
+        grep -q 'invalid JSON format, ignoring it' Source/Common/Config.cpp
 
     - name: Check for Updates
       id: check

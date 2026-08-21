@@ -1,0 +1,33 @@
+diff --git a/Source/Common/Config.cpp b/Source/Common/Config.cpp
+index 5d9d2ef98..7cc755fd6 100644
+--- a/Source/Common/Config.cpp
++++ b/Source/Common/Config.cpp
+@@ -36,11 +36,27 @@ namespace JSON {
+       return;
+     }
+ 
++    // A zero-length read is indistinguishable from "no config" as far as this layer is
++    // concerned, and it is not always a regular file that was opened -- treat it the same
++    // as a missing file rather than handing an empty buffer to the JSON parser.
++    if (Data.empty()) {
++      return;
++    }
++
+     FEX::JSON::JsonAllocator Pool {};
+     const json_t* json = FEX::JSON::CreateJSON(Data, Pool);
+ 
+     if (!json) {
+-      ERROR_AND_DIE_FMT("Failed to parse JSON from file '{}' - invalid JSON format", Config);
++      // Every caller of this treats the config file as optional -- a file that is simply
++      // absent returns quietly above. Killing the guest process because an optional file
++      // failed to parse is a far worse outcome than ignoring it, especially since the
++      // path can be picked up unintentionally: GetApplicationConfig() falls back to a
++      // *cwd-relative* "./<program>.json" whenever the FEX config directory cannot be
++      // created, so whatever happens to sit next to the guest program can end up here.
++      // Log it at error level (so the offending path is visible) and carry on with no
++      // overrides from this layer.
++      LogMan::Msg::EFmt("Failed to parse JSON from file '{}' - invalid JSON format, ignoring it", Config);
++      return;
+     }
+ 
+     const json_t* ConfigList = json_getProperty(json, "Config");
