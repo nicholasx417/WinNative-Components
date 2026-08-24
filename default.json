@@ -49,14 +49,14 @@
   },
   {
     "type": "Proton",
-    "verName": "Proton-11.0-1-x86-64-steam.wcp",
+    "verName": "Proton-11.0-2-x86-64-steam",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-1-x86-64-steam.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-2-x86-64-steam.wcp"
   },
   {
     "type": "Proton",
-    "verName": "Proton-11.0-1-arm64ec-steam-unix.wcp",
+    "verName": "Proton-11.0-2-arm64ec-steam-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton-unix/Proton-11.0-1-arm64ec-steam-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-2-arm64ec-steam-unix.wcp"
   }
 ]
