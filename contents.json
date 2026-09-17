@@ -553,6 +553,18 @@
   },
   {
     "type": "Proton",
+    "verName": "Proton-11.0-2-Arm64ec-Online-UnixLib",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-2-arm64ec-online-unixlib-wayland.wcp"
+  },
+  {
+    "type": "Proton",
+    "verName": "Proton-11.0-2-x86-64-Online-UnixLib",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/Proton-11.0-2-x86_64-online-unixlib.wcp"
+  },
+  {
+    "type": "Proton",
     "verName": "WN.Proton-11-arm64ec-b2-NTSync-v2",
     "verCode": "0",
     "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/Proton/WN.Proton-11-arm64ec-b2-NTSync-v2.wcp"
