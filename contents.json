@@ -1,9 +1,9 @@
 [
   {
     "type": "Box64",
-    "verName": "Box64-0.4.5-c6a8c4472",
+    "verName": "Box64-0.4.5-7de6142c9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-c6a8c4472/Box64-0.4.5-c6a8c4472.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-7de6142c9/Box64-0.4.5-7de6142c9.wcp"
   },
   {
     "type": "Box64",
@@ -217,9 +217,9 @@
   },
   {
     "type": "DXVK",
-    "verName": "Dxvk-Sarek-arm64ec-1.13.0-250ca929",
+    "verName": "Dxvk-Sarek-arm64ec-1.14.1-0c0e8f6f",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-250ca929/Dxvk-Sarek-arm64ec-1.13.0-250ca929.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-0c0e8f6f/Dxvk-Sarek-arm64ec-1.14.1-0c0e8f6f.wcp"
   },
   {
     "type": "DXVK",
@@ -799,9 +799,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.5-c6a8c4472",
+    "verName": "WOWBox64-0.4.5-7de6142c9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-c6a8c4472/WOWBox64-0.4.5-c6a8c4472.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-7de6142c9/WOWBox64-0.4.5-7de6142c9.wcp"
   },
   {
     "type": "WOWBox64",
