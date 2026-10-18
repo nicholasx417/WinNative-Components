@@ -85,15 +85,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.4-856bf154a",
+    "verName": "D7vk-2.4-bcd66d0c9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-856bf154a/D7vk-2.4-856bf154a.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-bcd66d0c9/D7vk-2.4-bcd66d0c9.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.4-arm64ec-856bf154a",
+    "verName": "D7vk-2.4-arm64ec-bcd66d0c9",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-856bf154a/D7vk-2.4-arm64ec-856bf154a.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-bcd66d0c9/D7vk-2.4-arm64ec-bcd66d0c9.wcp"
   },
   {
     "type": "D7VK",
@@ -439,15 +439,15 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2610-5285020de",
+    "verName": "FEXCore-2610-741e146fd",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2610-5285020de/FEXCore-2610-5285020de.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2610-741e146fd/FEXCore-2610-741e146fd.wcp"
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2610-5285020de-unix",
+    "verName": "FEXCore-2610-741e146fd-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2610-5285020de/FEXCore-2610-5285020de-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2610-741e146fd/FEXCore-2610-741e146fd-unix.wcp"
   },
   {
     "type": "FEXCore",
