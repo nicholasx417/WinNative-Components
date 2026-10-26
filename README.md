@@ -55,7 +55,7 @@ For Driver manager URL. Paste main repo URL.
 | **D7VK** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-077b49674/D7vk-2.4-077b49674.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=D7VK+Nightly+standard&expanded=true) |
 | **D7VK** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-077b49674/D7vk-2.4-arm64ec-077b49674.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=D7vk-arm64ec-nightly&expanded=true) |
 | **DXVK-Sarek** (Standard) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-nightly-e3861a10/Dxvk-Sarek-1.12.0-e3861a10.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Sarek+nightly+NOT+ARM64EC&expanded=true) |
-| **DXVK-Sarek** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-0c0e8f6f/Dxvk-Sarek-arm64ec-1.14.1-0c0e8f6f.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Sarek+nightly+ARM64EC&expanded=true) |
+| **DXVK-Sarek** (ARM64EC) | [**Download Latest**](https://github.com/nicholasx417/WinNative-Components/releases/download/dxvk-sarek-arm64ec-nightly-52a1b172/Dxvk-Sarek-arm64ec-1.14.1-52a1b172.wcp) | [View History](https://github.com/nicholasx417/WinNative-Components/releases?q=Sarek+nightly+ARM64EC&expanded=true) |
 
 ### Stable Builds
 
