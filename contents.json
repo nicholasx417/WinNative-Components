@@ -7,9 +7,9 @@
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.5-9cb6ef9c8",
+    "verName": "Box64-0.4.5-e4d002248",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-9cb6ef9c8/Box64-0.4.5-9cb6ef9c8.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-e4d002248/Box64-0.4.5-e4d002248.wcp"
   },
   {
     "type": "Box64",
@@ -85,15 +85,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.5-arm64ec-e3ff461d6",
+    "verName": "D7vk-2.5-888613c2c",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-e3ff461d6/D7vk-2.5-arm64ec-e3ff461d6.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-888613c2c/D7vk-2.5-888613c2c.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.5-e3ff461d6",
+    "verName": "D7vk-2.5-arm64ec-888613c2c",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-e3ff461d6/D7vk-2.5-e3ff461d6.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-888613c2c/D7vk-2.5-arm64ec-888613c2c.wcp"
   },
   {
     "type": "D7VK",
@@ -439,15 +439,15 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2611-90c9595cf",
+    "verName": "FEXCore-2611-e3b30dda2",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2611-90c9595cf/FEXCore-2611-90c9595cf.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2611-e3b30dda2/FEXCore-2611-e3b30dda2.wcp"
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2611-90c9595cf-unix",
+    "verName": "FEXCore-2611-e3b30dda2-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2611-90c9595cf/FEXCore-2611-90c9595cf-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2611-e3b30dda2/FEXCore-2611-e3b30dda2-unix.wcp"
   },
   {
     "type": "FEXCore",
@@ -799,9 +799,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.5-9cb6ef9c8",
+    "verName": "WOWBox64-0.4.5-e4d002248",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-9cb6ef9c8/WOWBox64-0.4.5-9cb6ef9c8.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-e4d002248/WOWBox64-0.4.5-e4d002248.wcp"
   },
   {
     "type": "WOWBox64",
