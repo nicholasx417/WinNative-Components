@@ -1,15 +1,15 @@
 [
   {
     "type": "Box64",
-    "verName": "Bionic-Box64-0.4.5-827f0ee54",
+    "verName": "Box64-0.4.5-6441fcfae",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-827f0ee54/Bionic-Box64-0.4.5-827f0ee54.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-6441fcfae/Box64-0.4.5-6441fcfae.wcp"
   },
   {
     "type": "Box64",
-    "verName": "Box64-0.4.5-43c046505",
+    "verName": "Bionic-Box64-0.4.5-827f0ee54",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/box64-nightly-0.4.5-43c046505/Box64-0.4.5-43c046505.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/bionic-box64-nightly-0.4.5-827f0ee54/Bionic-Box64-0.4.5-827f0ee54.wcp"
   },
   {
     "type": "Box64",
@@ -85,15 +85,15 @@
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.5-arm64ec-4d7afda17",
+    "verName": "D7vk-2.5-80e45d897",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-4d7afda17/D7vk-2.5-arm64ec-4d7afda17.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-80e45d897/D7vk-2.5-80e45d897.wcp"
   },
   {
     "type": "D7VK",
-    "verName": "D7vk-2.5-4d7afda17",
+    "verName": "D7vk-2.5-arm64ec-80e45d897",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-nightly-4d7afda17/D7vk-2.5-4d7afda17.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/d7vk-arm64ec-nightly-80e45d897/D7vk-2.5-arm64ec-80e45d897.wcp"
   },
   {
     "type": "D7VK",
@@ -439,15 +439,15 @@
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2611-ab135df09",
+    "verName": "FEXCore-2611-ea43314f0",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2611-ab135df09/FEXCore-2611-ab135df09.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-nightly-2611-ea43314f0/FEXCore-2611-ea43314f0.wcp"
   },
   {
     "type": "FEXCore",
-    "verName": "FEXCore-2611-ab135df09-unix",
+    "verName": "FEXCore-2611-ea43314f0-unix",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2611-ab135df09/FEXCore-2611-ab135df09-unix.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/fex-unix-2611-ea43314f0/FEXCore-2611-ea43314f0-unix.wcp"
   },
   {
     "type": "FEXCore",
@@ -697,15 +697,15 @@
   },
   {
     "type": "VKD3D",
-    "verName": "Vkd3d-3.1-2576c0b4",
+    "verName": "Vkd3d-3.1-arm64ec-5b1089c8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-nightly-2576c0b4/Vkd3d-3.1-2576c0b4.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-arm64ec-nightly-5b1089c8/Vkd3d-3.1-arm64ec-5b1089c8.wcp"
   },
   {
     "type": "VKD3D",
-    "verName": "Vkd3d-3.1-arm64ec-2576c0b4",
+    "verName": "Vkd3d-3.1-5b1089c8",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-arm64ec-nightly-2576c0b4/Vkd3d-3.1-arm64ec-2576c0b4.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/vkd3d-nightly-5b1089c8/Vkd3d-3.1-5b1089c8.wcp"
   },
   {
     "type": "VKD3D",
@@ -799,9 +799,9 @@
   },
   {
     "type": "WOWBox64",
-    "verName": "WOWBox64-0.4.5-43c046505",
+    "verName": "WOWBox64-0.4.5-6441fcfae",
     "verCode": "0",
-    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-43c046505/WOWBox64-0.4.5-43c046505.wcp"
+    "remoteUrl": "https://github.com/nicholasx417/WinNative-Components/releases/download/wowbox64-nightly-0.4.5-6441fcfae/WOWBox64-0.4.5-6441fcfae.wcp"
   },
   {
     "type": "WOWBox64",
